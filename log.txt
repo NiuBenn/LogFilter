@@ -1,0 +1,870 @@
+run node server
+listening on *:3000
+[2019-04-15 14:43:19.705][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: InitConfig
+[2019-04-15 14:43:19.705][I][31592:031592] [U.0.0.0][wsrpc][NetworkAdaptor] Construct NetworkAdaptor: 
+[2019-04-15 14:43:19.705][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServiceObserver][0x55775883d400] AdaptiveServiceObserver Construct
+[2019-04-15 14:43:19.705][I][31592:031592] [U.0.0.0][localsdk][ApplicationService][Init:41] initialized
+[2019-04-15 14:43:19.705][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServiceObserver] observe: ::maxhub::system::AppManager
+[2019-04-15 14:43:19.705][I][31592:031592] [U.0.0.0][localsdk][ChannelService][Init:73] initialized
+[2019-04-15 14:43:19.705][I][31592:031603] [U.0.0.0][wsrpc][AdaptiveService] Change To ReadyState
+[2019-04-15 14:43:19.705][I][31592:031603] [U.0.0.0][wsrpc][AdaptiveServiceObserver][0x55775883d400] Create Service Observer
+[2019-04-15 14:43:19.705][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServiceObserver] observe: ::maxhub::system::InputSourceManager
+[2019-04-15 14:43:19.705][I][31592:031603] [U.0.0.0][wsrpc][AdaptiveServiceObserver] Address of NetworkAdaptor: is 127.0.0.1
+[2019-04-15 14:43:19.705][I][31592:031592] [U.0.0.0][wsrpc][NotifyListener][0x55775883a410] Constructed
+[2019-04-15 14:43:19.705][I][31592:031603] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] ServiceObserver construct
+[2019-04-15 14:43:19.705][I][31592:031592] [U.0.0.0][wsrpc][NotifyListener][0x55775883a410] observe service: ::maxhub::system::InputSourceManager
+[2019-04-15 14:43:19.705][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServiceObserver] observe: ::maxhub::system::InputSourceManager
+[2019-04-15 14:43:19.705][I][31592:031592] [U.0.0.0][localsdk][InfoService][Init:80] initialized
+[2019-04-15 14:43:19.705][I][31592:031603] [U.0.0.0][wsrpc][ServiceObserver] send query request 127.0.0.1, use: 127.0.0.1:60328
+[2019-04-15 14:43:19.706][I][31592:031603] [U.0.0.0][wsrpc][ServiceObserver] observe: ::maxhub::system::AppManager
+[2019-04-15 14:43:19.706][I][31592:031603] [U.0.0.0][wsrpc][ServiceObserver] observe: ::maxhub::system::InputSourceManager
+[2019-04-15 14:43:19.706][I][31592:031603] [U.0.0.0][wsrpc][ServiceObserver] observe: ::maxhub::system::InputSourceManager
+[2019-04-15 14:43:19.706][I][31592:031603] [U.0.0.0][wsrpc][AdaptiveService] Change To RunningState
+[2019-04-15 14:43:19.706][I][31592:031603] [U.0.0.0][wsrpc][AdaptiveService] Leave ReadyState
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServiceObserver] observe: ::maxhub::system::DeviceManager
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][wsrpc][ServiceObserver] observe: ::maxhub::system::DeviceManager
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][localsdk][MicrophoneService][Init:67] initialized
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][wsrpc][NotifyListener][0x557758844480] Constructed
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServiceObserver] observe: ::maxhub::system::MicrophoneManager
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][wsrpc][ServiceObserver] observe: ::maxhub::system::MicrophoneManager
+[[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][wsrpc][NotifyListener][0x557758844480] observe service: ::maxhub::system::MicrophoneManager
+2019-04-15 14:43:19[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServiceObserver] observe: ::maxhub::system::MicrophoneManager
+] [connect] Successful connection
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][wsrpc][ServiceObserver] observe: ::maxhub::system::MicrophoneManager
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][localsdk][ScreenService][Init:69] initialized
+[2019-04-15 14:43:19.706][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] observe: ::maxhub::system::AppManager
+[2019-04-15 14:43:19.706][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] observe: ::maxhub::system::InputSourceManager
+[2019-04-15 14:43:19.706][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] observe: ::maxhub::system::InputSourceManager
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServiceObserver] observe: ::maxhub::system::ScreenManager
+[2019-04-15 14:43:19.706][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] observe: ::maxhub::system::DeviceManager
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][wsrpc][ServiceObserver] observe: ::maxhub::system::ScreenManager
+[2019-04-15 14:43:19.706][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] observe: ::maxhub::system::MicrophoneManager
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][localsdk][ScreenShare] initialized
+[2019-04-15 14:43:19.706][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] observe: ::maxhub::system::MicrophoneManager
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][wsrpc][NotifyListener][0x55775884ef00] Constructed
+[2019-04-15 14:43:19.706][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] observe: ::maxhub::system::ScreenManager
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServiceObserver] observe: ::maxhub::screen_share::ScreenShareHub
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][wsrpc][ServiceObserver] observe: ::maxhub::screen_share::ScreenShareHub
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][wsrpc][NotifyListener][0x55775884ef00] observe service: ::maxhub::screen_share::ScreenShareHub
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServiceObserver] observe: ::maxhub::screen_share::ScreenShareHub
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][wsrpc][ServiceObserver] observe: ::maxhub::screen_share::ScreenShareHub
+[2019-04-15 14:43:19.706][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] observe: ::maxhub::screen_share::ScreenShareHub
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][localsdk][SettingService][Init:47] initialized
+[2019-04-15 14:43:19.706][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] observe: ::maxhub::screen_share::ScreenShareHub
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][localsdk][SideBarEventEmitterRegister] initialized
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][wsrpc][NetworkAdaptor] Construct NetworkAdaptor: 
+[2019-04-15 14:43:19.706][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServer][0x557758852ae0] AdaptiveServer Construct
+[2019-04-15 14:43:19.707][I][31592:031592] [U.0.0.0][localsdk][SystemService][Init:68] initialized
+[2019-04-15 14:43:19.707][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServiceObserver] observe: ::maxhub::system::PowerManager
+[2019-04-15 14:43:19.707][I][31592:031592] [U.0.0.0][wsrpc][ServiceObserver] observe: ::maxhub::system::PowerManager
+[2019-04-15 14:43:19.707][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] observe: ::maxhub::system::PowerManager
+[2019-04-15 14:43:19] [connect] Successful connection
+[2019-04-15 14:43:19.709][I][31592:031607] [U.0.0.0][wsrpc][AdaptiveService] Change To ReadyState
+[2019-04-15 14:43:19.709][I][31592:031607] [U.0.0.0][wsrpc][AdaptiveServer][0x557758852ae0] Try Run Server
+[2019-04-15 14:43:19.709][I][31592:031607] [U.0.0.0][wsrpc][Server][0x7f4c34000da0] Server Constructed
+[2019-04-15 14:43:19.710][I][31592:031607] [U.0.0.0][wsrpc][Server] - ::maxhub::system::AppExecutor register [::maxhub::system::AppExecutor::IsInterceptAction_STRING_STRING]
+[2019-04-15 14:43:19.710][I][31592:031607] [U.0.0.0][wsrpc][Server] - ::maxhub::system::AppExecutor register [::maxhub::system::AppExecutor::ExecuteAction_STRING_STRING_STRING]
+[2019-04-15 14:43:19.710][I][31592:031607] [U.0.0.0][wsrpc][Server] - ::maxhub::system::AppExecutor register [::maxhub::system::AppExecutor::ExecuteAction_STRING_STRING_STRING_STRING]
+[2019-04-15 14:43:19.710][I][31592:031607] [U.0.0.0][wsrpc][Server] - ::maxhub::system::AppExecutor register [::maxhub::system::AppExecutor::GetModuleName]
+[2019-04-15 14:43:19.710][I][31592:031607] [U.0.0.0][wsrpc][Server] - ::maxhub::system::AppExecutor register [::maxhub::system::AppExecutor::construct]
+[2019-04-15 14:43:19.710][I][31592:031607] [U.0.0.0][wsrpc][ServiceHost] ServiceHost Construct
+[2019-04-15 14:43:19.710][I][31592:031607] [U.0.0.0][wsrpc][Server] publish service: ::maxhub::system::AppExecutor
+[2019-04-15 14:43:19.710][I][31592:031607] [U.0.0.0][wsrpc][Server] server run at 37179
+[2019-04-15 14:43:19.710][I][31592:031607] [U.0.0.0][wsrpc][AdaptiveService] Change To RunningState
+[2019-04-15 14:43:19.710][I][31592:031607] [U.0.0.0][wsrpc][AdaptiveService] Leave ReadyState
+[2019-04-15 14:43:19.714][I][31592:031592] [U.0.0.0][localsdk][InitTest] apis: {
+    "config": [
+        {
+            "description": "Used to store temporary files",
+            "name": "tempDir"
+        },
+        {
+            "description": "Used to store log files",
+            "name": "logDir"
+        },
+        {
+            "description": "Used to store application data",
+            "name": "appdataDir"
+        },
+        {
+            "description": "Local socketio server address",
+            "name": "messagerAddr"
+        },
+        {
+            "description": "RPC communication network card name",
+            "name": "networkAdaptor"
+        }
+    ],
+    "healthcheck": {
+        "action": "dll",
+        "method": "HealthCheck"
+    },
+    "services": [
+        {
+            "desc": "get sender list",
+            "invokeMethod": "ScreenShareGetSenderList",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "getsenderlist",
+            "namespace": "app",
+            "service": "screenshare",
+            "version": "1.0"
+        },
+        {
+            "desc": "fetch screen of sender",
+            "invokeMethod": "ScreenShareFetchScreen",
+            "invokeParamSchema": "\n        {\n             \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n             \"type\": \"object\",\n             \"properties\": {\n                  \"id\": {\n                      \"type\": \"string\",\n                      \"description\": \"id of screen sender\"\n                  }\n             },\n             \"required\": [\"id\"],\n             \"additionalProperties\": false\n        }",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "fetchscreen",
+            "namespace": "app",
+            "service": "screenshare",
+            "version": "1.0"
+        },
+        {
+            "desc": "get pincode of current server",
+            "invokeMethod": "ScreenShareGetPinCode",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "getpincode",
+            "namespace": "app",
+            "service": "screenshare",
+            "version": "1.0"
+        },
+        {
+            "desc": "get qrcode of current server",
+            "invokeMethod": "ScreenShareGetQRCode",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "getqrcode",
+            "namespace": "app",
+            "service": "screenshare",
+            "version": "1.0"
+        },
+        {
+            "desc": "get recent task list",
+            "invokeMethod": "SystemActivityGetRecentTasks",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "getrecenttasks",
+            "namespace": "system",
+            "service": "activity",
+            "version": "1.0"
+        },
+        {
+            "desc": "remove task",
+            "invokeMethod": "SystemActivityRemoveTask",
+            "invokeParamSchema": "\n        {\n             \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n             \"type\": \"object\",\n             \"properties\": {\n                  \"hwnd\": {\n                      \"type\": \"number\",\n                      \"description\": \"handle of window\"\n                  },\n                  \"force\": {\n                      \"type\": \"boolean\",\n                      \"description\": \"fore to close window or not\"\n                  }\n             },\n             \"required\": [\"hwnd\", \"force\"],\n             \"additionalProperties\": false\n        }",
+            "invokeType": "dll",
+            "method": "POST",
+            "name": "removetask",
+            "namespace": "system",
+            "service": "activity",
+            "version": "1.0"
+        },
+        {
+            "desc": "move task to top",
+            "invokeMethod": "SystemActivityMoveTaskToTop",
+            "invokeParamSchema": "\n        {\n             \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n             \"type\": \"object\",\n             \"properties\": {\n                  \"hwnd\": {\n                      \"type\": \"number\",\n                      \"description\": \"handle of window\"\n                  }\n             },\n             \"required\": [\"hwnd\"],\n             \"additionalProperties\": false\n        }",
+            "invokeType": "dll",
+            "method": "POST",
+            "name": "movetasktotop",
+            "namespace": "system",
+            "service": "activity",
+            "version": "1.0"
+        },
+        {
+            "desc": "remove topmost task",
+            "invokeMethod": "SystemActivityRemoveTopmostTask",
+            "invokeParamSchema": "\n        {\n             \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n             \"type\": \"object\",\n             \"properties\": {\n                  \"force\": {\n                      \"type\": \"boolean\",\n                      \"description\": \"fore to close window or not\"\n                  }\n             },\n             \"required\": [\"force\"],\n             \"additionalProperties\": false\n        }",
+            "invokeType": "dll",
+            "method": "POST",
+            "name": "removetopmosttask",
+            "namespace": "system",
+            "service": "activity",
+            "version": "1.0"
+        },
+        {
+            "desc": "set windows as desktop windows",
+            "invokeMethod": "SystemActivitySetWindowsAsDesktop",
+            "invokeParamSchema": "\n        {\n             \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n             \"type\": \"object\",\n             \"properties\": {\n                  \"hwnd\": {\n                      \"type\": \"number\",\n                      \"description\": \"handle of window\"\n                  }\n             },\n             \"required\": [\"hwnd\"],\n             \"additionalProperties\": false\n        }",
+            "invokeType": "dll",
+            "method": "POST",
+            "name": "asmainwindow",
+            "namespace": "system",
+            "service": "activity",
+            "version": "1.0"
+        },
+        {
+            "desc": "use this only for back compatibility",
+            "invokeMethod": "SystemActivitySetWindowsAsDesktop",
+            "invokeParamSchema": "\n        {\n             \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n             \"type\": \"object\",\n             \"properties\": {\n                  \"hwnd\": {\n                      \"type\": \"number\",\n                      \"description\": \"handle of window\"\n                  }\n             },\n             \"required\": [\"hwnd\"],\n             \"additionalProperties\": false\n        }",
+            "invokeType": "dll",
+            "method": "POST",
+            "name": "ignoretask",
+            "namespace": "system",
+            "service": "activity",
+            "version": "1.0"
+        },
+        {
+            "desc": "control dock is show",
+            "invokeMethod": "SystemActivityShowDock",
+            "invokeParamSchema": "\n        {\n             \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n             \"type\": \"object\",\n             \"properties\": {\n                  \"status\": {\n                      \"type\": \"boolean\",\n                      \"description\": \"is show dock\"\n                  }\n             },\n             \"required\": [\"status\"],\n             \"additionalProperties\": false\n        }",
+            "invokeType": "dll",
+            "method": "POST",
+            "name": "showdock",
+            "namespace": "system",
+            "service": "activity",
+            "version": "1.0"
+        },
+        {
+            "desc": "hide all task",
+            "invokeMethod": "SystemActivityHideAllTask",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "POST",
+            "name": "hidealltask",
+            "namespace": "system",
+            "service": "activity",
+            "version": "1.0"
+        },
+        {
+            "desc": "get default app list of current system",
+            "invokeMethod": "SystemAppGetDefautAppList",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "getdefaultapplist",
+            "namespace": "system",
+            "service": "app",
+            "version": "1.0"
+        },
+        {
+            "desc": "get the app list of current system",
+            "invokeMethod": "SystemAppGetAppList",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "getapplist",
+            "namespace": "system",
+            "service": "app",
+            "version": "1.0"
+        },
+        {
+            "desc": "open app by params",
+            "invokeMethod": "SystemAppOpenApp",
+            "invokeParamSchema": "\n        {\n            \"$schema\":\"http://json-schema.org/draft-04/schema#\",\n            \"type\":\"object\",\n            \"properties\":{\n                \"package-name\":{\n                    \"type\":\"string\",\n                    \"description\":\"package name\"\n                },\n                \"bin-path\":{\n                    \"type\":\"string\",\n                    \"description\":\"bin path\"\n                },\n                \"params\":{\n                    \"type\":\"string\",\n                    \"description\":\"open app bin params\"\n                }\n            },\n            \"required\":[\n                \"package-name\",\n                \"bin-path\",\n                \"params\"\n            ],\n            \"additionalProperties\":false\n        }",
+            "invokeType": "dll",
+            "method": "POST",
+            "name": "openapp",
+            "namespace": "system",
+            "service": "app",
+            "version": "1.0"
+        },
+        {
+            "desc": "get the channellist of current system",
+            "invokeMethod": "SystemChannelGetChannelList",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "getchannellist",
+            "namespace": "system",
+            "service": "channel",
+            "version": "1.0"
+        },
+        {
+            "desc": "get current channel of current system",
+            "invokeMethod": "SystemChannelGetCurrentChannel",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "getcurrentchannel",
+            "namespace": "system",
+            "service": "channel",
+            "version": "1.0"
+        },
+        {
+            "desc": "select the input channel of current system",
+            "invokeMethod": "SystemChannelSelectInputChannel",
+            "invokeParamSchema": "\n        {\n             \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n             \"type\": \"object\",\n             \"properties\": {\n                  \"channel-id\": {\n                      \"type\": \"string\",\n                      \"description\": \"channal id\"\n                  }\n             },\n             \"required\": [\"channel-id\"],\n             \"additionalProperties\": false\n        }",
+            "invokeType": "dll",
+            "method": "POST",
+            "name": "selectinputchannel",
+            "namespace": "system",
+            "service": "channel",
+            "version": "1.0"
+        },
+        {
+            "desc": "get home page url",
+            "invokeMethod": "SystemSettingGetHomePageUrl",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "gethomepageurl",
+            "namespace": "system",
+            "service": "setting",
+            "version": "1.0"
+        },
+        {
+            "desc": "set home page url",
+            "invokeMethod": "SystemSettingSetHomePageUrl",
+            "invokeParamSchema": "\n        {\n            \"$schema\":\"http://json-schema.org/draft-04/schema#\",\n            \"type\":\"object\",\n            \"properties\":{\n                \"homepage-url\":{\n                    \"type\":\"string\",\n                    \"description\":\"homepage url\"\n                }\n            },\n            \"required\":[\n                \"homepage-url\"\n            ],\n            \"additionalProperties\":false\n        }",
+            "invokeType": "dll",
+            "method": "POST",
+            "name": "sethomepageurl",
+            "namespace": "system",
+            "service": "setting",
+            "version": "1.0"
+        },
+        {
+            "desc": "return current is using custom home page",
+            "invokeMethod": "SystemSettingIsUsingCustomHomePage",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "isusingcustomhomepage",
+            "namespace": "system",
+            "service": "setting",
+            "version": "1.0"
+        },
+        {
+            "desc": "set is using custom homepage ",
+            "invokeMethod": "SystemSettingUseCustomHomePage",
+            "invokeParamSchema": "\n        {\n            \"$schema\":\"http://json-schema.org/draft-04/schema#\",\n            \"type\":\"object\",\n            \"properties\":{\n                \"using-custom-homepage\":{\n                    \"type\":\"boolean\",\n                    \"description\":\"the status of using custom homepage\"\n                }\n            },\n            \"required\":[\n                \"using-custom-homepage\"\n            ],\n            \"additionalProperties\":false\n        }",
+            "invokeType": "dll",
+            "method": "POST",
+            "name": "usecustomhomepage",
+            "namespace": "system",
+            "service": "setting",
+            "version": "1.0"
+        },
+        {
+            "desc": "get wallpaper path",
+            "invokeMethod": "SystemSettingGetWallpaper",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "getwallpaper",
+            "namespace": "system",
+            "service": "setting",
+            "version": "1.0"
+        },
+        {
+            "desc": "set wallpaper path",
+            "invokeMethod": "SystemSettingSetWallpaper",
+            "invokeParamSchema": "\n        {\n            \"$schema\":\"http://json-schema.org/draft-04/schema#\",\n            \"type\":\"object\",\n            \"properties\":{\n                \"wallpaper-path\":{\n                    \"type\":\"string\",\n                    \"description\":\"wallpaper path\"\n                }\n            },\n            \"required\":[\n                \"wallpaper-path\"\n            ],\n            \"additionalProperties\":false\n        }",
+            "invokeType": "dll",
+            "method": "POST",
+            "name": "setwallpaper",
+            "namespace": "system",
+            "service": "setting",
+            "version": "1.0"
+        },
+        {
+            "desc": "return current is using into desktop button",
+            "invokeMethod": "SystemSettingIsUsingIntoDesktopButton",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "isusingdesktopbutton",
+            "namespace": "system",
+            "service": "setting",
+            "version": "1.0"
+        },
+        {
+            "desc": "set is using desktop button",
+            "invokeMethod": "SystemSettingUseIntoDesktopButton",
+            "invokeParamSchema": "\n        {\n            \"$schema\":\"http://json-schema.org/draft-04/schema#\",\n            \"type\":\"object\",\n            \"properties\":{\n                \"using-desktop-button\":{\n                    \"type\":\"boolean\",\n                    \"description\":\"the status of using desktop button\"\n                }\n            },\n            \"required\":[\n                \"using-desktop-button\"\n            ],\n            \"additionalProperties\":false\n        }",
+            "invokeType": "dll",
+            "method": "POST",
+            "name": "usedesktopbutton",
+            "namespace": "system",
+            "service": "setting",
+            "version": "1.0"
+        },
+        {
+            "desc": "get uuid",
+            "invokeMethod": "SystemInfoGetUUID",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "getuuid",
+            "namespace": "system",
+            "service": "info",
+            "version": "1.0"
+        },
+        {
+            "desc": "get hardware sn of device",
+            "invokeMethod": "SystemInfoGetSN",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "getsn",
+            "namespace": "system",
+            "service": "info",
+            "version": "1.0"
+        },
+        {
+            "desc": "get version of module",
+            "invokeMethod": "SystemInfoGetModuleVersion",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "getmodulename",
+            "namespace": "system",
+            "service": "info",
+            "version": "1.0"
+        },
+        {
+            "desc": "get version of android",
+            "invokeMethod": "SystemInfoGetMainVersion",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "getmainversion",
+            "namespace": "system",
+            "service": "info",
+            "version": "1.0"
+        },
+        {
+            "desc": "get microphone list",
+            "invokeMethod": "SystemMicrophoneGetList",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "getlist",
+            "namespace": "system",
+            "service": "microphone",
+            "version": "1.0"
+        },
+        {
+            "desc": "get volume of microphone",
+            "invokeMethod": "SystemMicrophoneGetVolume",
+            "invokeParamSchema": "\n        {\n            \"$schema\":\"http://json-schema.org/draft-04/schema#\",\n            \"type\":\"object\",\n            \"properties\":{\n                \"id\":{\n                    \"type\":\"string\",\n                    \"descritption\": \"the id of microphone\"\n                }\n            },\n            \"required\":[\n                \"id\"\n            ],\n            \"additionalProperties\":false\n        }",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "getvolume",
+            "namespace": "system",
+            "service": "microphone",
+            "version": "1.0"
+        },
+        {
+            "desc": "set volume of microphone",
+            "invokeMethod": "SystemMicrophoneSetVolume",
+            "invokeParamSchema": "\n        {\n            \"$schema\":\"http://json-schema.org/draft-04/schema#\",\n            \"type\":\"object\",\n            \"properties\":{\n                \"id\":{\n                    \"type\":\"string\",\n                    \"descritption\": \"the id of microphone\"\n                },\n                \"volume\":{\n                    \"type\":\"number\",\n                    \"minimum\": 0.0,\n                    \"maximum\": 1.0,\n                    \"description\":\"the volume to set\"\n                }\n            },\n            \"required\":[\n                \"id\", \"volume\"\n            ],\n            \"additionalProperties\":false\n        }",
+            "invokeType": "dll",
+            "method": "POST",
+            "name": "setvolume",
+            "namespace": "system",
+            "service": "microphone",
+            "version": "1.0"
+        },
+        {
+            "desc": "check whether microphone is muted",
+            "invokeMethod": "SystemMicrophoneIsMute",
+            "invokeParamSchema": "\n        {\n            \"$schema\":\"http://json-schema.org/draft-04/schema#\",\n            \"type\":\"object\",\n            \"properties\":{\n                \"id\":{\n                    \"type\":\"string\",\n                    \"descritption\": \"the id of microphone\"\n                }\n            },\n            \"required\":[\n                \"id\"\n            ],\n            \"additionalProperties\":false\n        }",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "ismute",
+            "namespace": "system",
+            "service": "microphone",
+            "version": "1.0"
+        },
+        {
+            "desc": "set the mute state of microphone",
+            "invokeMethod": "SystemMicrophoneSetVolume",
+            "invokeParamSchema": "\n        {\n            \"$schema\":\"http://json-schema.org/draft-04/schema#\",\n            \"type\":\"object\",\n            \"properties\":{\n                \"id\":{\n                    \"type\":\"string\",\n                    \"descritption\": \"the id of microphone\"\n                },\n                \"mute\":{\n                    \"type\":\"boolean\",\n                    \"description\":\"mute or not\"\n                }\n            },\n            \"required\":[\n                \"id\", \"mute\"\n            ],\n            \"additionalProperties\":false\n        }",
+            "invokeType": "dll",
+            "method": "POST",
+            "name": "setmute",
+            "namespace": "system",
+            "service": "microphone",
+            "version": "1.0"
+        },
+        {
+            "desc": "30 seconds send ready heart beat to keep the countdown off",
+            "invokeMethod": "SystemScreenSendReadyHeartBeat",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "sendreadyheartbeat",
+            "namespace": "system",
+            "service": "screen",
+            "version": "1.0"
+        },
+        {
+            "desc": "get the state of screen",
+            "invokeMethod": "SystemScreenGetScreenState",
+            "invokeParamSchema": "{}",
+            "invokeType": "dll",
+            "method": "GET",
+            "name": "getscreenstate",
+            "namespace": "system",
+            "service": "screen",
+            "version": "1.0"
+        }
+    ]
+}
+[2019-04-15 14:43:19] [connect] WebSocket Connection 127.0.0.1:3000 v-2 "WebSocket++/0.8.1" /socket.io/?EIO=4&transport=websocket&t=1555310599 101
+a user connected
+[2019-04-15 14:43:19] [connect] WebSocket Connection 127.0.0.1:3000 v-2 "WebSocket++/0.8.1" /socket.io/?EIO=4&transport=websocket&t=1555310599 101
+a user connected
+[2019-04-15 14:43:20.241][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: ScreenShareGetSenderList
+[2019-04-15 14:43:20.241][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: ScreenShareFetchScreen
+[2019-04-15 14:43:20.241][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: ScreenShareGetPinCode
+[2019-04-15 14:43:20.241][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: ScreenShareGetQRCode
+[2019-04-15 14:43:20.241][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemActivityGetRecentTasks
+[2019-04-15 14:43:20.241][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemActivityRemoveTask
+[2019-04-15 14:43:20.241][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemActivityMoveTaskToTop
+[2019-04-15 14:43:20.241][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemActivityRemoveTopmostTask
+[2019-04-15 14:43:20.241][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemActivitySetWindowsAsDesktop
+[2019-04-15 14:43:20.241][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemActivitySetWindowsAsDesktop
+[2019-04-15 14:43:20.241][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemActivityShowDock
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemActivityHideAllTask
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemAppGetDefautAppList
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemAppGetAppList
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemAppOpenApp
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemChannelGetChannelList
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemChannelGetCurrentChannel
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemChannelSelectInputChannel
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemSettingGetHomePageUrl
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemSettingSetHomePageUrl
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemSettingIsUsingCustomHomePage
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemSettingUseCustomHomePage
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemSettingGetWallpaper
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemSettingSetWallpaper
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemSettingIsUsingIntoDesktopButton
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemSettingUseIntoDesktopButton
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemInfoGetUUID
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemInfoGetSN
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemInfoGetModuleVersion
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemInfoGetMainVersion
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemMicrophoneGetList
+[2019-04-15 14:43:20.242][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemMicrophoneGetVolume
+[2019-04-15 14:43:20.243][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemMicrophoneSetVolume
+[2019-04-15 14:43:20.243][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemMicrophoneIsMute
+[2019-04-15 14:43:20.243][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemMicrophoneSetVolume
+[2019-04-15 14:43:20.243][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemScreenSendReadyHeartBeat
+[2019-04-15 14:43:20.243][I][31592:031592] [U.0.0.0][localsdk][InitTest] check: SystemScreenGetScreenState
+[2019-04-15 14:43:20.244][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemAppGetDefautAppList
+[2019-04-15 14:43:20.244][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemAppGetAppList
+[2019-04-15 14:43:20.274][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemAppOpenApp
+[2019-04-15 14:43:20.274][I][31592:031592] [U.0.0.0][localsdk][ApplicationService] open application: , xdg-open /home/guorongfei/Desktop/appexcutor.log, 
+[2019-04-15 14:43:20.274][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemSettingUseCustomHomePage
+[2019-04-15 14:43:20.275][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemSettingIsUsingCustomHomePage
+[2019-04-15 14:43:20.275][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemSettingSetWallpaper
+[2019-04-15 14:43:20.275][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemSettingGetWallpaper
+[2019-04-15 14:43:20.275][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemSettingSetHomePageUrl
+[2019-04-15 14:43:20.275][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemSettingGetHomePageUrl
+[2019-04-15 14:43:20.275][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemSettingUseIntoDesktopButton
+[2019-04-15 14:43:20.275][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemSettingIsUsingIntoDesktopButton
+[2019-04-15 14:43:20.275][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemInfoGetUUID
+[2019-04-15 14:43:20.275][I][31592:031592] [U.0.0.0][localsdk][InfoServiceTest] uuid: 635b3016-a19c-425d-9ff7-3297c0851cb8
+[2019-04-15 14:43:20.276][I][31592:031592] [U.0.0.0][wsrpc][NetworkAdaptor] Construct NetworkAdaptor: 
+[2019-04-15 14:43:20.276][I][31592:031592] [U.0.0.0][wsrpc][Server][0x557758852200] Server Constructed
+[2019-04-15 14:43:20.276][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::DeviceManager register [::maxhub::system::DeviceManager::GetSN]
+[2019-04-15 14:43:20.276][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::DeviceManager register [::maxhub::system::DeviceManager::GetDeviceName]
+[2019-04-15 14:43:20.276][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::DeviceManager register [::maxhub::system::DeviceManager::SetDeviceName_STRING]
+[2019-04-15 14:43:20.276][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::DeviceManager register [::maxhub::system::DeviceManager::GetHostVersion]
+[2019-04-15 14:43:20.276][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::DeviceManager register [::maxhub::system::DeviceManager::IsSupportEMR]
+[2019-04-15 14:43:20.276][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::DeviceManager register [::maxhub::system::DeviceManager::ResetSystem]
+[2019-04-15 14:43:20.276][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::DeviceManager register [::maxhub::system::DeviceManager::IsTrialVersion]
+[2019-04-15 14:43:20.276][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::DeviceManager register [::maxhub::system::DeviceManager::IsActivated]
+[2019-04-15 14:43:20.276][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::DeviceManager register [::maxhub::system::DeviceManager::GetExternalDeviceList_ExternalDeviceType]
+[2019-04-15 14:43:20.276][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::DeviceManager register [::maxhub::system::DeviceManager::construct]
+[2019-04-15 14:43:20.276][I][31592:031592] [U.0.0.0][wsrpc][ServiceHost] ServiceHost Construct
+[2019-04-15 14:43:20.276][I][31592:031592] [U.0.0.0][wsrpc][Server] publish service: ::maxhub::system::DeviceManager
+[2019-04-15 14:43:20.276][I][31592:031592] [U.0.0.0][wsrpc][Server] server run at 39135
+[2019-04-15 14:43:20.706][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] found service: ::maxhub::system::DeviceManager, [endpoint: 127.0.0.1:39135] 0
+[2019-04-15 14:43:20.707][I][31592:031606] [U.0.0.0][wsrpc][Channel][0x7f4c440103a0] Channel Constructed
+[2019-04-15 14:43:20.707][I][31592:031631] [U.0.0.0][wsrpc][Session][0x7f4c24000be0] create session
+[2019-04-15 14:43:20.708][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] hp service changed: ::maxhub::system::DeviceManager [endpoint: 127.0.0.1:39135] 0
+[2019-04-15 14:43:21.476][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemInfoGetSN
+[2019-04-15 14:43:21.477][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemInfoGetModuleVersion
+[2019-04-15 14:43:21.477][I][31592:031592] [U.0.0.0][wsrpc][Server][0x557758852200] Server destroyed
+[2019-04-15 14:43:21.478][I][31592:031592] [U.0.0.0][wsrpc][Acceptor][~Acceptor:62] acceptor destroyed
+[2019-04-15 14:43:21.478][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c24000be0] stop session
+[2019-04-15 14:43:21.478][I][31592:031592] [U.0.0.0][wsrpc][Acceptor][~Acceptor:78] acceptor destroyed
+[2019-04-15 14:43:21.478][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c24000be0] destroy session
+[2019-04-15 14:43:21.478][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c24000be0] stop session
+[2019-04-15 14:43:21.479][E][31592:031646] [U.0.0.0][wsrpc][Channel][0x7f4c440103a0] fail to read from websocket: The WebSocket stream was gracefully closed at both endpoints
+[2019-04-15 14:43:21.479][I][31592:031592] [U.0.0.0][wsrpc][ServiceHost] ServiceHost Destroy
+[2019-04-15 14:43:21.479][I][31592:031592] [U.0.0.0][wsrpc][NetworkAdaptor] Construct NetworkAdaptor: 
+[2019-04-15 14:43:21.479][I][31592:031592] [U.0.0.0][wsrpc][Server][0x557758852200] Server Constructed
+[2019-04-15 14:43:21.479][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::InputSourceManager register [::maxhub::system::InputSourceManager::GetInputList]
+[2019-04-15 14:43:21.479][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::InputSourceManager register [::maxhub::system::InputSourceManager::GetCurrentInput]
+[2019-04-15 14:43:21.479][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::InputSourceManager register [::maxhub::system::InputSourceManager::SelectInput_STRING]
+[2019-04-15 14:43:21.479][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::InputSourceManager register [::maxhub::system::InputSourceManager::construct]
+[2019-04-15 14:43:21.479][I][31592:031592] [U.0.0.0][wsrpc][ServiceHost] ServiceHost Construct
+[2019-04-15 14:43:21.479][I][31592:031592] [U.0.0.0][wsrpc][Server] publish service: ::maxhub::system::InputSourceManager
+[2019-04-15 14:43:21.479][I][31592:031592] [U.0.0.0][wsrpc][Server] server run at 39559
+[2019-04-15 14:43:21.706][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] found service: ::maxhub::system::InputSourceManager, [endpoint: 127.0.0.1:39559] 0
+[2019-04-15 14:43:21.706][I][31592:031606] [U.0.0.0][wsrpc][Channel][0x7f4c44011b60] Channel Constructed
+[2019-04-15 14:43:21.707][I][31592:031648] [U.0.0.0][wsrpc][Session][0x7f4c1c000be0] create session
+[2019-04-15 14:43:21.708][I][31592:031606] [U.0.0.0][wsrpc][NotifyListener][0x55775884e500] found service: 127.0.0.1:39559, priority: 0
+[2019-04-15 14:43:21.708][I][31592:031606] [U.0.0.0][wsrpc][Channel][0x7f4c44012c10] Channel Constructed
+[2019-04-15 14:43:21.708][I][31592:031648] [U.0.0.0][wsrpc][Session][0x7f4c1c004c90] create session
+[2019-04-15 14:43:21.708][I][31592:031606] [U.0.0.0][wsrpc][NotifyListener] subscribe notify: ::maxhub::system::InputSourceManager::kNotifyTypeOnInputStateChange
+[2019-04-15 14:43:21.709][I][31592:031653] [U.0.0.0][wsrpc][Server][0x557758852200] got ::maxhub::system::InputSourceManager, ::maxhub::system::InputSourceManager::kNotifyTypeOnInputStateChange subscriber
+[2019-04-15 14:43:21.709][I][31592:031606] [U.0.0.0][wsrpc][NotifyListener] subscribe notify: ::maxhub::system::InputSourceManager::kNotifyTypeOnInputSourceChange
+[2019-04-15 14:43:21.709][I][31592:031653] [U.0.0.0][wsrpc][Server][0x557758852200] got ::maxhub::system::InputSourceManager, ::maxhub::system::InputSourceManager::kNotifyTypeOnInputSourceChange subscriber
+[2019-04-15 14:43:21.710][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] hp service changed: ::maxhub::system::InputSourceManager [endpoint: 127.0.0.1:39559] 0
+[2019-04-15 14:43:22.679][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemChannelGetChannelList
+[2019-04-15 14:43:22.681][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemChannelGetCurrentChannel
+[2019-04-15 14:43:22.682][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemChannelSelectInputChannel
+[2019-04-15 14:43:22.682][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemChannelGetCurrentChannel
+[2019-04-15 14:43:22.683][I][31592:031592] [U.0.0.0][wsrpc][Server][0x557758852200] we have 1 subscriber currently
+[2019-04-15 14:43:22.683][I][31592:031592] [U.0.0.0][wsrpc][Server][0x557758852200] send notify ::maxhub::system::InputSourceManager::kNotifyTypeOnInputSourceChange of ::maxhub::system::InputSourceManager
+[2019-04-15 14:43:22.683][I][31592:031592] [U.0.0.0][wsrpc][Server][0x557758852200] we have 1 subscriber currently
+[2019-04-15 14:43:22.683][I][31592:031592] [U.0.0.0][wsrpc][Server][0x557758852200] send notify ::maxhub::system::InputSourceManager::kNotifyTypeOnInputStateChange of ::maxhub::system::InputSourceManager
+[2019-04-15 14:43:22.683][I][31592:031652] [U.0.0.0][wsrpc][NotifyListener][0x55775883a410] got notify: ::maxhub::system::InputSourceManager::kNotifyTypeOnInputSourceChange
+[2019-04-15 14:43:22.684][I][31592:031652] [U.0.0.0][wsrpc][NotifyListener][0x55775883a410] got notify: ::maxhub::system::InputSourceManager::kNotifyTypeOnInputStateChange
+current channel changed: {"channel":"{\"id\":\"4\",\"state\":2,\"type\":2}"}
+[2019-04-15 14:43:22.685][I][31592:031592] [U.0.0.0][wsrpc][Server][0x557758852200] Server destroyed
+[2019-04-15 14:43:22.686][I][31592:031592] [U.0.0.0][wsrpc][Acceptor][~Acceptor:62] acceptor destroyed
+[2019-04-15 14:43:22.686][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c1c000be0] stop session
+[2019-04-15 14:43:22.686][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c1c004c90] stop session
+[2019-04-15 14:43:22.686][I][31592:031592] [U.0.0.0][wsrpc][Acceptor][~Acceptor:78] acceptor destroyed
+[2019-04-15 14:43:22.686][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c1c004c90] destroy session
+[2019-04-15 14:43:22.686][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c1c004c90] stop session
+channel state changed: {"channel":"{\"id\":\"4\",\"state\":2,\"type\":2}"}
+[2019-04-15 14:43:22.686][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c1c000be0] destroy session
+[2019-04-15 14:43:22.686][E][31592:031652] [U.0.0.0][wsrpc][Channel][0x7f4c44012c10] fail to read from websocket: The WebSocket stream was gracefully closed at both endpoints
+[2019-04-15 14:43:22.686][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c1c000be0] stop session
+[2019-04-15 14:43:22.726][E][31592:031650] [U.0.0.0][wsrpc][Channel][0x7f4c44011b60] fail to read from websocket: The WebSocket stream was gracefully closed at both endpoints
+[2019-04-15 14:43:22.726][I][31592:031592] [U.0.0.0][wsrpc][ServiceHost] ServiceHost Destroy
+[2019-04-15 14:43:22.726][I][31592:031592] [U.0.0.0][wsrpc][NetworkAdaptor] Construct NetworkAdaptor: 
+[2019-04-15 14:43:22.726][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServer][0x55775885c570] AdaptiveServer Construct
+[2019-04-15 14:43:22.726][I][31592:031654] [U.0.0.0][wsrpc][AdaptiveService] Change To ReadyState
+[2019-04-15 14:43:22.726][I][31592:031654] [U.0.0.0][wsrpc][AdaptiveServer][0x55775885c570] Try Run Server
+[2019-04-15 14:43:22.726][I][31592:031654] [U.0.0.0][wsrpc][Server][0x7f4c2c000da0] Server Constructed
+[2019-04-15 14:43:22.726][I][31592:031654] [U.0.0.0][wsrpc][Server] - ::maxhub::screen_share::ScreenShareHub register [::maxhub::screen_share::ScreenShareHub::GetSenderList]
+[2019-04-15 14:43:22.726][I][31592:031654] [U.0.0.0][wsrpc][Server] - ::maxhub::screen_share::ScreenShareHub register [::maxhub::screen_share::ScreenShareHub::GetSharingList]
+[2019-04-15 14:43:22.726][I][31592:031654] [U.0.0.0][wsrpc][Server] - ::maxhub::screen_share::ScreenShareHub register [::maxhub::screen_share::ScreenShareHub::Share_STRING]
+[2019-04-15 14:43:22.726][I][31592:031654] [U.0.0.0][wsrpc][Server] - ::maxhub::screen_share::ScreenShareHub register [::maxhub::screen_share::ScreenShareHub::IsSenderSharing_STRING]
+[2019-04-15 14:43:22.727][I][31592:031654] [U.0.0.0][wsrpc][Server] - ::maxhub::screen_share::ScreenShareHub register [::maxhub::screen_share::ScreenShareHub::HasSenderSharing]
+[2019-04-15 14:43:22.727][I][31592:031654] [U.0.0.0][wsrpc][Server] - ::maxhub::screen_share::ScreenShareHub register [::maxhub::screen_share::ScreenShareHub::GetDisplayNormalizedGeometry_STRING]
+[2019-04-15 14:43:22.727][I][31592:031654] [U.0.0.0][wsrpc][Server] - ::maxhub::screen_share::ScreenShareHub register [::maxhub::screen_share::ScreenShareHub::GetPinCode]
+[2019-04-15 14:43:22.727][I][31592:031654] [U.0.0.0][wsrpc][Server] - ::maxhub::screen_share::ScreenShareHub register [::maxhub::screen_share::ScreenShareHub::StopAll]
+[2019-04-15 14:43:22.727][I][31592:031654] [U.0.0.0][wsrpc][Server] - ::maxhub::screen_share::ScreenShareHub register [::maxhub::screen_share::ScreenShareHub::SetTouchBack_BOOL]
+[2019-04-15 14:43:22.727][I][31592:031654] [U.0.0.0][wsrpc][Server] - ::maxhub::screen_share::ScreenShareHub register [::maxhub::screen_share::ScreenShareHub::GetQRCode]
+[2019-04-15 14:43:22.727][I][31592:031654] [U.0.0.0][wsrpc][Server] - ::maxhub::screen_share::ScreenShareHub register [::maxhub::screen_share::ScreenShareHub::SetWindowGeometry_DisplayRectF]
+[2019-04-15 14:43:22.727][I][31592:031654] [U.0.0.0][wsrpc][Server] - ::maxhub::screen_share::ScreenShareHub register [::maxhub::screen_share::ScreenShareHub::construct]
+[2019-04-15 14:43:22.727][I][31592:031654] [U.0.0.0][wsrpc][ServiceHost] ServiceHost Construct
+[2019-04-15 14:43:22.727][I][31592:031654] [U.0.0.0][wsrpc][Server] publish service: ::maxhub::screen_share::ScreenShareHub
+[2019-04-15 14:43:22.727][I][31592:031654] [U.0.0.0][wsrpc][Server] server run at 33435
+[2019-04-15 14:43:22.727][I][31592:031654] [U.0.0.0][wsrpc][AdaptiveService] Change To RunningState
+[2019-04-15 14:43:22.727][I][31592:031654] [U.0.0.0][wsrpc][AdaptiveService] Leave ReadyState
+[2019-04-15 14:43:23.207][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] found service: ::maxhub::screen_share::ScreenShareHub, [endpoint: 127.0.0.1:33435] 0
+[2019-04-15 14:43:23.207][I][31592:031606] [U.0.0.0][wsrpc][Channel][0x7f4c44014560] Channel Constructed
+[2019-04-15 14:43:23.207][I][31592:031655] [U.0.0.0][wsrpc][Session][0x7f4c20001590] create session
+[2019-04-15 14:43:23.208][I][31592:031606] [U.0.0.0][wsrpc][NotifyListener][0x55775884c620] found service: 127.0.0.1:33435, priority: 0
+[2019-04-15 14:43:23.208][I][31592:031606] [U.0.0.0][wsrpc][Channel][0x7f4c44015680] Channel Constructed
+[2019-04-15 14:43:23.209][I][31592:031655] [U.0.0.0][wsrpc][Session][0x7f4c20004d50] create session
+[2019-04-15 14:43:23.209][I][31592:031606] [U.0.0.0][wsrpc][NotifyListener] subscribe notify: ::maxhub::screen_share::ScreenShareHub::kNotifyTypeOnDisconnected
+[2019-04-15 14:43:23.209][I][31592:031660] [U.0.0.0][wsrpc][Server][0x7f4c2c000da0] got ::maxhub::screen_share::ScreenShareHub, ::maxhub::screen_share::ScreenShareHub::kNotifyTypeOnDisconnected subscriber
+[2019-04-15 14:43:23.210][I][31592:031606] [U.0.0.0][wsrpc][NotifyListener] subscribe notify: ::maxhub::screen_share::ScreenShareHub::kNotifyTypeOnConnected
+[2019-04-15 14:43:23.210][I][31592:031660] [U.0.0.0][wsrpc][Server][0x7f4c2c000da0] got ::maxhub::screen_share::ScreenShareHub, ::maxhub::screen_share::ScreenShareHub::kNotifyTypeOnConnected subscriber
+[2019-04-15 14:43:23.211][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] hp service changed: ::maxhub::screen_share::ScreenShareHub [endpoint: 127.0.0.1:33435] 0
+[2019-04-15 14:43:23.926][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: ScreenShareGetSenderList
+[2019-04-15 14:43:23.927][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: ScreenShareFetchScreen
+[2019-04-15 14:43:23.928][I][31592:031592] [U.0.0.0][wsrpc][Server][0x7f4c2c000da0] we have 1 subscriber currently
+[2019-04-15 14:43:23.928][I][31592:031592] [U.0.0.0][wsrpc][Server][0x7f4c2c000da0] send notify ::maxhub::screen_share::ScreenShareHub::kNotifyTypeOnConnected of ::maxhub::screen_share::ScreenShareHub
+[2019-04-15 14:43:23.928][I][31592:031592] [U.0.0.0][wsrpc][Server][0x7f4c2c000da0] we have 1 subscriber currently
+[2019-04-15 14:43:23.928][I][31592:031592] [U.0.0.0][wsrpc][Server][0x7f4c2c000da0] send notify ::maxhub::screen_share::ScreenShareHub::kNotifyTypeOnDisconnected of ::maxhub::screen_share::ScreenShareHub
+[2019-04-15 14:43:23.928][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: ScreenShareGetPinCode
+[2019-04-15 14:43:23.928][I][31592:031659] [U.0.0.0][wsrpc][NotifyListener][0x55775884ef00] got notify: ::maxhub::screen_share::ScreenShareHub::kNotifyTypeOnConnected
+[2019-04-15 14:43:23.928][I][31592:031659] [U.0.0.0][wsrpc][NotifyListener][0x55775884ef00] got notify: ::maxhub::screen_share::ScreenShareHub::kNotifyTypeOnDisconnected
+sender connect: {"sender":"{\"id\":\"test\",\"name\":\"test notify\",\"type\":1}"}
+sender disconnect: {"id":"test"}
+[2019-04-15 14:43:23.929][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: ScreenShareGetQRCode
+[2019-04-15 14:43:23.930][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServer] [0x55775885c570] AdaptiveServer Destroy
+[2019-04-15 14:43:23.930][I][31592:031592] [U.0.0.0][wsrpc][Server][0x7f4c2c000da0] Server destroyed
+[2019-04-15 14:43:23.930][I][31592:031592] [U.0.0.0][wsrpc][Acceptor][~Acceptor:62] acceptor destroyed
+[2019-04-15 14:43:23.930][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c20001590] stop session
+[2019-04-15 14:43:23.930][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c20004d50] stop session
+[2019-04-15 14:43:23.930][I][31592:031592] [U.0.0.0][wsrpc][Acceptor][~Acceptor:78] acceptor destroyed
+[2019-04-15 14:43:23.930][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c20004d50] destroy session
+[2019-04-15 14:43:23.930][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c20004d50] stop session
+[2019-04-15 14:43:23.930][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c20001590] destroy session
+[2019-04-15 14:43:23.930][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c20001590] stop session
+[2019-04-15 14:43:23.930][E][31592:031659] [U.0.0.0][wsrpc][Channel][0x7f4c44015680] fail to read from websocket: The WebSocket stream was gracefully closed at both endpoints
+[2019-04-15 14:43:23.974][E][31592:031657] [U.0.0.0][wsrpc][Channel][0x7f4c44014560] fail to read from websocket: The WebSocket stream was gracefully closed at both endpoints
+[2019-04-15 14:43:23.974][I][31592:031592] [U.0.0.0][wsrpc][ServiceHost] ServiceHost Destroy
+[2019-04-15 14:43:23.974][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveService] Leave RunningState
+[2019-04-15 14:43:23.974][I][31592:031592] [U.0.0.0][wsrpc][NetworkAdaptor] Construct NetworkAdaptor: 
+[2019-04-15 14:43:23.974][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServiceObserver][0x7f4c0c001270] AdaptiveServiceObserver Construct
+[2019-04-15 14:43:23.974][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServiceObserver] observe: ::maxhub::system::AppExecutor
+[2019-04-15 14:43:23.974][I][31592:031661] [U.0.0.0][wsrpc][AdaptiveService] Change To ReadyState
+[2019-04-15 14:43:23.974][I][31592:031661] [U.0.0.0][wsrpc][AdaptiveServiceObserver][0x7f4c0c001270] Create Service Observer
+[2019-04-15 14:43:23.974][I][31592:031661] [U.0.0.0][wsrpc][AdaptiveServiceObserver] Address of NetworkAdaptor: is 127.0.0.1
+[2019-04-15 14:43:23.974][I][31592:031661] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c2c002020] ServiceObserver construct
+[2019-04-15 14:43:23.974][I][31592:031661] [U.0.0.0][wsrpc][ServiceObserver] send query request 127.0.0.1, use: 127.0.0.1:53222
+[2019-04-15 14:43:23.974][I][31592:031661] [U.0.0.0][wsrpc][ServiceObserver] observe: ::maxhub::system::AppExecutor
+[2019-04-15 14:43:23.974][I][31592:031661] [U.0.0.0][wsrpc][AdaptiveService] Change To RunningState
+[2019-04-15 14:43:23.974][I][31592:031661] [U.0.0.0][wsrpc][AdaptiveService] Leave ReadyState
+[2019-04-15 14:43:23.974][I][31592:031662] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c2c002020] observe: ::maxhub::system::AppExecutor
+[2019-04-15 14:43:24.206][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] ::maxhub::system::DeviceManager expired
+[2019-04-15 14:43:24.207][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] lost service: ::maxhub::system::DeviceManager, [endpoint: 127.0.0.1:39135] 0
+[2019-04-15 14:43:24.207][I][31592:031606] [U.0.0.0][wsrpc][Channel][0x7f4c440103a0] Channel Released
+[2019-04-15 14:43:24.207][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] all service lost: ::maxhub::system::DeviceManager
+[2019-04-15 14:43:24.475][I][31592:031662] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c2c002020] found service: ::maxhub::system::AppExecutor, [endpoint: 127.0.0.1:37179] 4
+[2019-04-15 14:43:24.475][I][31592:031662] [U.0.0.0][wsrpc][Channel][0x7f4c18002770] Channel Constructed
+[2019-04-15 14:43:24.475][I][31592:031610] [U.0.0.0][wsrpc][Session][0x7f4c280031d0] create session
+[2019-04-15 14:43:24.476][I][31592:031662] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c2c002020] hp service changed: ::maxhub::system::AppExecutor [endpoint: 127.0.0.1:37179] 4
+[2019-04-15 14:43:25.175][I][31592:031664] [U.0.0.0][localsdk][SideBarEventEmitterRegister] Home Pressed
+rpc home pressed: {}
+[2019-04-15 14:43:25.176][I][31592:031664] [U.0.0.0][localsdk][SideBarEventEmitterRegister] Back Pressed
+rpc back pressed: {}
+[2019-04-15 14:43:25.177][I][31592:031664] [U.0.0.0][localsdk][SideBarEventEmitterRegister] Task Pressed
+[2019-04-15 14:43:25.186][I][31592:031662] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c2c002020] UnObserve ::maxhub::system::AppExecutor
+[2019-04-15 14:43:25.186][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServiceObserver] [0x7f4c0c001270] AdaptiveServiceObserver Destroy
+[2019-04-15 14:43:25.187][I][31592:031592] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c2c002020] ServiceObserver destroy
+[2019-04-15 14:43:25.187][E][31592:031610] [U.0.0.0][wsrpc][Session][0x7f4c280031d0] fail to read: The WebSocket stream was gracefully closed at both endpoints
+[2019-04-15 14:43:25.187][I][31592:031662] [U.0.0.0][wsrpc][Channel][0x7f4c18002770] Channel Released
+[2019-04-15 14:43:25.187][E][31592:031663] [U.0.0.0][wsrpc][Channel][0x7f4c18002770] fail to read from websocket: Operation canceled
+[2019-04-15 14:43:25.187][I][31592:031610] [U.0.0.0][wsrpc][Session][0x7f4c280031d0] destroy session
+[2019-04-15 14:43:25.187][I][31592:031610] [U.0.0.0][wsrpc][Session][0x7f4c280031d0] stop session
+[2019-04-15 14:43:25.187][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveService] Leave RunningState
+[2019-04-15 14:43:25.187][I][31592:031592] [U.0.0.0][wsrpc][NetworkAdaptor] Construct NetworkAdaptor: 
+[2019-04-15 14:43:25.187][I][31592:031592] [U.0.0.0][wsrpc][Server][0x7f4c2c000da0] Server Constructed
+[2019-04-15 14:43:25.187][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::MicrophoneManager register [::maxhub::system::MicrophoneManager::GetMicrophoneList]
+[2019-04-15 14:43:25.187][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::MicrophoneManager register [::maxhub::system::MicrophoneManager::GetVolume_STRING]
+[2019-04-15 14:43:25.187][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::MicrophoneManager register [::maxhub::system::MicrophoneManager::SetVolume_STRING_FLOAT]
+[2019-04-15 14:43:25.187][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::MicrophoneManager register [::maxhub::system::MicrophoneManager::IsMute_STRING]
+[2019-04-15 14:43:25.187][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::MicrophoneManager register [::maxhub::system::MicrophoneManager::SetMute_STRING_BOOL]
+[2019-04-15 14:43:25.187][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::MicrophoneManager register [::maxhub::system::MicrophoneManager::construct]
+[2019-04-15 14:43:25.187][I][31592:031592] [U.0.0.0][wsrpc][ServiceHost] ServiceHost Construct
+[2019-04-15 14:43:25.187][I][31592:031592] [U.0.0.0][wsrpc][Server] publish service: ::maxhub::system::MicrophoneManager
+[2019-04-15 14:43:25.187][I][31592:031592] [U.0.0.0][wsrpc][Server] server run at 38747
+[2019-04-15 14:43:25.207][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] found service: ::maxhub::system::MicrophoneManager, [endpoint: 127.0.0.1:38747] 0
+[2019-04-15 14:43:25.207][I][31592:031606] [U.0.0.0][wsrpc][Channel][0x7f4c44016e70] Channel Constructed
+[2019-04-15 14:43:25.207][I][31592:031667] [U.0.0.0][wsrpc][Session][0x7f4c0c002110] create session
+[2019-04-15 14:43:25.208][I][31592:031606] [U.0.0.0][wsrpc][NotifyListener][0x55775884ea00] found service: 127.0.0.1:38747, priority: 0
+[2019-04-15 14:43:25.208][I][31592:031606] [U.0.0.0][wsrpc][Channel][0x7f4c440178e0] Channel Constructed
+[2019-04-15 14:43:25.208][I][31592:031667] [U.0.0.0][wsrpc][Session][0x7f4c0c005190] create session
+[2019-04-15 14:43:25.208][I][31592:031606] [U.0.0.0][wsrpc][NotifyListener] subscribe notify: ::maxhub::system::MicrophoneManager::kNotifyTypeOnMuteChanged
+[2019-04-15 14:43:25.209][I][31592:031672] [U.0.0.0][wsrpc][Server][0x7f4c2c000da0] got ::maxhub::system::MicrophoneManager, ::maxhub::system::MicrophoneManager::kNotifyTypeOnMuteChanged subscriber
+[2019-04-15 14:43:25.209][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] hp service changed: ::maxhub::system::MicrophoneManager [endpoint: 127.0.0.1:38747] 0
+[2019-04-15 14:43:25.209][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] ::maxhub::system::InputSourceManager expired
+[2019-04-15 14:43:25.209][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] lost service: ::maxhub::system::InputSourceManager, [endpoint: 127.0.0.1:39559] 0
+[2019-04-15 14:43:25.209][I][31592:031606] [U.0.0.0][wsrpc][Channel][0x7f4c44011b60] Channel Released
+[2019-04-15 14:43:25.209][I][31592:031606] [U.0.0.0][wsrpc][Channel][0x7f4c44012c10] Channel Released
+[2019-04-15 14:43:25.209][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] all service lost: ::maxhub::system::InputSourceManager
+[2019-04-15 14:43:25.888][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemMicrophoneGetList
+[2019-04-15 14:43:25.889][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemMicrophoneSetVolume
+[2019-04-15 14:43:25.891][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemMicrophoneGetVolume
+[2019-04-15 14:43:25.892][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemMicrophoneSetMute
+[2019-04-15 14:43:25.892][I][31592:031670] [U.0.0.0][wsrpc][Server][0x7f4c2c000da0] we have 1 subscriber currently
+[2019-04-15 14:43:25.892][I][31592:031670] [U.0.0.0][wsrpc][Server][0x7f4c2c000da0] send notify ::maxhub::system::MicrophoneManager::kNotifyTypeOnMuteChanged of ::maxhub::system::MicrophoneManager
+[2019-04-15 14:43:25.893][I][31592:031671] [U.0.0.0][wsrpc][NotifyListener][0x557758844480] got notify: ::maxhub::system::MicrophoneManager::kNotifyTypeOnMuteChanged
+[2019-04-15 14:43:25.893][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemMicrophoneIsMute
+[2019-04-15 14:43:25.894][I][31592:031592] [U.0.0.0][wsrpc][Server][0x7f4c2c000da0] Server destroyed
+[2019-04-15 14:43:25.894][I][31592:031592] [U.0.0.0][wsrpc][Acceptor][~Acceptor:62] acceptor destroyed
+[2019-04-15 14:43:25.894][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c0c002110] stop session
+[2019-04-15 14:43:25.895][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c0c005190] stop session
+[2019-04-15 14:43:25.895][I][31592:031592] [U.0.0.0][wsrpc][Acceptor][~Acceptor:78] acceptor destroyed
+[2019-04-15 14:43:25.895][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c0c005190] destroy session
+[2019-04-15 14:43:25.895][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c0c005190] stop session
+[2019-04-15 14:43:25.895][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c0c002110] destroy session
+[2019-04-15 14:43:25.895][E][31592:031671] [U.0.0.0][wsrpc][Channel][0x7f4c440178e0] fail to read from websocket: The WebSocket stream was gracefully closed at both endpoints
+[2019-04-15 14:43:25.895][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c0c002110] stop session
+[2019-04-15 14:43:25.938][E][31592:031669] [U.0.0.0][wsrpc][Channel][0x7f4c44016e70] fail to read from websocket: The WebSocket stream was gracefully closed at both endpoints
+[2019-04-15 14:43:25.938][I][31592:031592] [U.0.0.0][wsrpc][ServiceHost] ServiceHost Destroy
+[2019-04-15 14:43:25.939][I][31592:031592] [U.0.0.0][wsrpc][NetworkAdaptor] Construct NetworkAdaptor: 
+[2019-04-15 14:43:25.939][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServer][0x7f4c18002650] AdaptiveServer Construct
+[2019-04-15 14:43:25.939][I][31592:031673] [U.0.0.0][wsrpc][AdaptiveService] Change To ReadyState
+[2019-04-15 14:43:25.939][I][31592:031673] [U.0.0.0][wsrpc][AdaptiveServer][0x7f4c18002650] Try Run Server
+[2019-04-15 14:43:25.939][I][31592:031673] [U.0.0.0][wsrpc][Server][0x7f4c2c002ec0] Server Constructed
+[2019-04-15 14:43:25.939][I][31592:031673] [U.0.0.0][wsrpc][Server] - ::maxhub::system::PowerManager register [::maxhub::system::PowerManager::IsRebootCorrectly]
+[2019-04-15 14:43:25.939][I][31592:031673] [U.0.0.0][wsrpc][Server] - ::maxhub::system::PowerManager register [::maxhub::system::PowerManager::Shutdown]
+[2019-04-15 14:43:25.939][I][31592:031673] [U.0.0.0][wsrpc][Server] - ::maxhub::system::PowerManager register [::maxhub::system::PowerManager::StartUpDelayTime_LONG]
+[2019-04-15 14:43:25.939][I][31592:031673] [U.0.0.0][wsrpc][Server] - ::maxhub::system::PowerManager register [::maxhub::system::PowerManager::Reboot]
+[2019-04-15 14:43:25.939][I][31592:031673] [U.0.0.0][wsrpc][Server] - ::maxhub::system::PowerManager register [::maxhub::system::PowerManager::IsEnableWakeUpByInput]
+[2019-04-15 14:43:25.939][I][31592:031673] [U.0.0.0][wsrpc][Server] - ::maxhub::system::PowerManager register [::maxhub::system::PowerManager::SetEnableWakeUpByInput_BOOL]
+[2019-04-15 14:43:25.939][I][31592:031673] [U.0.0.0][wsrpc][Server] - ::maxhub::system::PowerManager register [::maxhub::system::PowerManager::construct]
+[2019-04-15 14:43:25.939][I][31592:031673] [U.0.0.0][wsrpc][ServiceHost] ServiceHost Construct
+[2019-04-15 14:43:25.939][I][31592:031673] [U.0.0.0][wsrpc][Server] publish service: ::maxhub::system::PowerManager
+[2019-04-15 14:43:25.940][I][31592:031673] [U.0.0.0][wsrpc][Server] server run at 42939
+[2019-04-15 14:43:25.940][I][31592:031673] [U.0.0.0][wsrpc][AdaptiveService] Change To RunningState
+[2019-04-15 14:43:25.940][I][31592:031673] [U.0.0.0][wsrpc][AdaptiveService] Leave ReadyState
+[2019-04-15 14:43:26.207][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] found service: ::maxhub::system::PowerManager, [endpoint: 127.0.0.1:42939] 0
+[2019-04-15 14:43:26.207][I][31592:031606] [U.0.0.0][wsrpc][Channel][0x7f4c44012c10] Channel Constructed
+[2019-04-15 14:43:26.208][I][31592:031674] [U.0.0.0][wsrpc][Session][0x7f4c000008e0] create session
+[2019-04-15 14:43:26.209][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] hp service changed: ::maxhub::system::PowerManager [endpoint: 127.0.0.1:42939] 0
+[2019-04-15 14:43:26.710][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] ::maxhub::screen_share::ScreenShareHub expired
+[2019-04-15 14:43:26.710][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] lost service: ::maxhub::screen_share::ScreenShareHub, [endpoint: 127.0.0.1:33435] 0
+[2019-04-15 14:43:26.710][I][31592:031606] [U.0.0.0][wsrpc][Channel][0x7f4c44014560] Channel Released
+[2019-04-15 14:43:26.710][I][31592:031606] [U.0.0.0][wsrpc][Channel][0x7f4c44015680] Channel Released
+[2019-04-15 14:43:26.710][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] all service lost: ::maxhub::screen_share::ScreenShareHub
+[2019-04-15 14:43:28.211][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] ::maxhub::system::MicrophoneManager expired
+[2019-04-15 14:43:28.211][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] lost service: ::maxhub::system::MicrophoneManager, [endpoint: 127.0.0.1:38747] 0
+[2019-04-15 14:43:28.211][I][31592:031606] [U.0.0.0][wsrpc][Channel][0x7f4c44016e70] Channel Released
+[2019-04-15 14:43:28.211][I][31592:031606] [U.0.0.0][wsrpc][Channel][0x7f4c440178e0] Channel Released
+[2019-04-15 14:43:28.211][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] all service lost: ::maxhub::system::MicrophoneManager
+[2019-04-15 14:43:32.939][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemSystemReboot
+[2019-04-15 14:43:32.941][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServer] [0x7f4c18002650] AdaptiveServer Destroy
+[2019-04-15 14:43:32.941][I][31592:031592] [U.0.0.0][wsrpc][Server][0x7f4c2c002ec0] Server destroyed
+[2019-04-15 14:43:32.941][I][31592:031592] [U.0.0.0][wsrpc][Acceptor][~Acceptor:62] acceptor destroyed
+[2019-04-15 14:43:32.941][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c000008e0] stop session
+[2019-04-15 14:43:32.942][I][31592:031592] [U.0.0.0][wsrpc][Acceptor][~Acceptor:78] acceptor destroyed
+[2019-04-15 14:43:32.942][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c000008e0] destroy session
+[2019-04-15 14:43:32.942][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c000008e0] stop session
+[2019-04-15 14:43:32.942][E][31592:031676] [U.0.0.0][wsrpc][Channel][0x7f4c44012c10] fail to read from websocket: The WebSocket stream was gracefully closed at both endpoints
+[2019-04-15 14:43:32.942][I][31592:031592] [U.0.0.0][wsrpc][ServiceHost] ServiceHost Destroy
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveService] Leave RunningState
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][NetworkAdaptor] Construct NetworkAdaptor: 
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server][0x7f4c2c002ec0] Server Constructed
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::SetPictureMode_PictureMode]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::GetPictureMode]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::GetBacklight]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::SetBackLight_FLOAT]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::IsAutoBrightnessAvailable]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::IsAutoBrightnessOn]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::SetAutoBrightness_BOOL]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::DisableAutoLight]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::RestoreAutoLight_FLOAT]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::SetContrast_FLOAT]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::GetContrast]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::IsScreenOn]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::SetScreenOn_BOOL]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::SetScreenSaveEnable_BOOL]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::GetScreenSaveEnable]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::SetScreenSaveTime_INT]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::GetScreenSaveTime]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::ScreenSaveReadyHeartBeat]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::ScreenSaveAbort]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::ResetScreenSaveTimer]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::SetDayDreamTime_INT]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::GetDayDreamTime]
+[2019-04-15 14:43:32.943][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::SetDayDreamOn_BOOL]
+[2019-04-15 14:43:32.944][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::IsDayDreamOn]
+[2019-04-15 14:43:32.944][I][31592:031592] [U.0.0.0][wsrpc][Server] - ::maxhub::system::ScreenManager register [::maxhub::system::ScreenManager::construct]
+[2019-04-15 14:43:32.944][I][31592:031592] [U.0.0.0][wsrpc][ServiceHost] ServiceHost Construct
+[2019-04-15 14:43:32.944][I][31592:031592] [U.0.0.0][wsrpc][Server] publish service: ::maxhub::system::ScreenManager
+[2019-04-15 14:43:32.944][I][31592:031592] [U.0.0.0][wsrpc][Server] server run at 36949
+[2019-04-15 14:43:33.210][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] found service: ::maxhub::system::ScreenManager, [endpoint: 127.0.0.1:36949] 0
+[2019-04-15 14:43:33.210][I][31592:031606] [U.0.0.0][wsrpc][Channel][0x7f4c44015680] Channel Constructed
+[2019-04-15 14:43:33.210][I][31592:031679] [U.0.0.0][wsrpc][Session][0x7f4c04000be0] create session
+[2019-04-15 14:43:33.211][I][31592:031606] [U.0.0.0][wsrpc][ServiceObserver][0x7f4c4c000da0] hp service changed: ::maxhub::system::ScreenManager [endpoint: 127.0.0.1:36949] 0
+[2019-04-15 14:43:34.144][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemScreenSendReadyHeartBeat
+ScreenSaveReadyHeartBeat Invoke.
+[2019-04-15 14:43:34.145][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: SystemScreenGetScreenState
+[2019-04-15 14:43:34.146][I][31592:031592] [U.0.0.0][wsrpc][Server][0x7f4c2c002ec0] Server destroyed
+[2019-04-15 14:43:34.146][I][31592:031592] [U.0.0.0][wsrpc][Acceptor][~Acceptor:62] acceptor destroyed
+[2019-04-15 14:43:34.146][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c04000be0] stop session
+[2019-04-15 14:43:34.146][I][31592:031592] [U.0.0.0][wsrpc][Acceptor][~Acceptor:78] acceptor destroyed
+[2019-04-15 14:43:34.146][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c04000be0] destroy session
+[2019-04-15 14:43:34.146][I][31592:031592] [U.0.0.0][wsrpc][Session][0x7f4c04000be0] stop session
+[2019-04-15 14:43:34.190][E][31592:031681] [U.0.0.0][wsrpc][Channel][0x7f4c44015680] fail to read from websocket: The WebSocket stream was gracefully closed at both endpoints
+[2019-04-15 14:43:34.190][I][31592:031592] [U.0.0.0][wsrpc][ServiceHost] ServiceHost Destroy
+===============================================================================
+All tests passed (159 assertions in 11 test cases)
+
+kill nodejs server
+[2019-04-15 14:43:34] [disconnect] Disconnect close local:[1006,Underlying Transport Error] remote:[1006]
+[2019-04-15 14:43:34] [disconnect] Disconnect close local:[1006,End of File] remote:[1006]
