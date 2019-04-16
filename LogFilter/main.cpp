@@ -1,5 +1,4 @@
 #include"LogFilter.h"
-#include"Tools.hpp"
 #include<iostream>
 
 int main()
