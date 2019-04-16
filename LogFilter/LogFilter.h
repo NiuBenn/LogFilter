@@ -41,6 +41,11 @@ public:
 
 		return true;
 	}
+
+	static bool MakeKV(string input, vector<pair<string, string>>& kv)
+	{
+
+	}
 };
 
 typedef struct LogInfo	//LogIngo结构体，存放一条log的信信息
@@ -59,7 +64,10 @@ class Logs	//Log类，用来统计多条LogInfo的一个集合
 {
 public:
 	bool AddLog(string& one_line);	//添加LogInfo，传入参数若是合法Log返回true,否则返回false
-	void Search();	//检索过滤
+	
+	int SearchByTimeL(int time_stamp, int dif);	//通过时间进行过滤检索
+	
+	int SearchByOtherL();	//通过其他条件进行过滤检索
 	
 	list<LogInfo>& LogList();	//一个接口函数，将私有成员 log_list_ 返回
 
@@ -74,14 +82,21 @@ class LogFilter		//LogFilter日志过滤器类
 {
 public:
 	LogFilter(string file_path)
-		:log_file_path_(file_path)
+		:log_file_path_(file_path),count_(0)
 	{};
 
 	bool LogFilterInit();	//使用file_path初始化，判断路径文件是否合法
-
-	bool UpdateLogs();		//更新log_object_的LogInfo信息
+	
+	int UpdateLogs();		//更新log_object_的LogInfo信息
+	
+	void SearchByTimeLF();	//通过时间进行过滤检索
+	
+	void SearchByOtherLF();	//通过其他条件进行过滤检索
+	
+	void SearchLF(string input);
 
 private:
+	int count_;
 	Logs logs_object_;		//一个logs对象，统计LogInfo
 	string log_file_path_;	//要进行操作的日志文件路径
 };

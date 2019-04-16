@@ -1,4 +1,5 @@
 #include"LogFilter.h"
+#include<iostream>
 #include<list>;
 #include<fstream>
 
@@ -70,6 +71,25 @@ bool Logs::AddLog(string& one_line)		//添加LogInfo信息，如果传入的string是合法Lo
 	return true;
 };
 
+int Logs::SearchByTimeL(int time_stamp, int dif)
+{
+	int logs_count = 0;		//用来统计符合条件的log数量
+	for (auto& loginfo : log_list_)		//遍历log_list_
+	{
+		if (loginfo.time_ >= time_stamp - dif && loginfo.time_ <= time_stamp + dif - 1)
+		{
+			logs_count++;
+			cout << loginfo.one_full_log_ << endl;
+		}
+	}
+	return logs_count;
+}
+
+int Logs::SearchByOtherL()
+{
+	return 0;
+}
+
 list<LogInfo>& Logs::LogList()	
 {
 	return log_list_;
@@ -88,18 +108,26 @@ bool LogFilter::LogFilterInit()
 	return true;
 }
 
-bool LogFilter::UpdateLogs()	//更新LogInfo，更新成功返回true，失败返回false
+int LogFilter::UpdateLogs()	//更新LogInfo，更新成功返回更新成功的Log条数，失败返回-1;
 {
 	ifstream log_file(log_file_path_);
 	string one_line;	//临时变量，存放从文件中读取到的一行数据
 	
+	int new_count = 0;
+
 	if (!log_file.is_open())
 	{
-		return false;
+		return -1;
 	}
 
 	while (std::getline(log_file, one_line))	//循环读取，直到将文件读完
 	{
+		if (new_count < count_)
+		{
+			new_count++;
+			continue;
+		}
+
 		bool ret = logs_object_.AddLog(one_line);	//添加LogInfo信息
 		if (false == ret)
 		{
@@ -107,8 +135,62 @@ bool LogFilter::UpdateLogs()	//更新LogInfo，更新成功返回true，失败返回false
 			if (logs_object_.LogList().size() > 0)
 				logs_object_.LogList().back().one_full_log_ += "\n" + one_line;
 		}
+		new_count++;
 	}
 
 	log_file.close();
-	return true;
+	swap(count_, new_count);
+	return count_ - new_count;
+}
+
+void LogFilter::SearchByTimeLF()
+{
+	system("cls");
+	string time;
+	int dif, time_stamp;
+	cout << "请输入您要查询的log时间(格式如:2019-04-15 14:43:19)" << endl;
+	getchar();	//吃掉输入缓冲区中的回车
+
+	getline(cin, time);		//接收用户输入的时间，因为中间有空格，所以cin无法一次接收
+	time_stamp = Tools::StringToTimeStamp(time);	//转换为时间戳
+
+	cout << "请输入要查询的时间范围(秒为单位，例如 1 代表前后误差各1秒)" << endl;
+	cin >> dif;
+
+	int ret = UpdateLogs();		//更新LogInfo数据
+	if (-1 == ret)
+	{
+		cout << "更新log数据失败！！" << endl;
+		system("pause");
+		return;
+	}
+	cout << "已成功更新" << ret << "条log信息,即将按时间筛选" << endl;
+	system("pause");
+
+	ret = logs_object_.SearchByTimeL(time_stamp, dif);	//进行筛选
+	cout << "已成功筛选出" << ret << "条log" << endl;
+	system("pause");
+}
+
+void LogFilter::SearchLF(string input)
+{
+	bool param_time;
+	vector<pair<string, string>> kv;
+	if (input.substr(0, strlen("logfilter")) != "logfilter")
+	{
+		cout << "非法命令！！" << endl;
+		return;
+	}
+
+	if (input.find("--time") != string::npos)
+	{
+		param_time = false;
+		//input = input.substr();
+	}
+	else
+		param_time = true;
+
+	bool ret = Tools::MakeKV(input, kv);
+	
+
 }

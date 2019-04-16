@@ -1,17 +1,28 @@
 #include"LogFilter.h"
+#include"Menu.h"
 #include<iostream>
 
 int main()
 {
-	LogFilter logfilter("log.txt");
+	string log_file_path;
+	/*cout << "请输入要进行操作的log文件路径:";
+	cin >> log_file_path;*/
+	log_file_path = "log.txt";
+	LogFilter logfilter(log_file_path);
 	bool ret = logfilter.LogFilterInit();
 	if (false == ret)
 	{
-		cout << "Init Error!!" << endl;
+		cout << "Init Error!! Log File Open Error !!" << endl;
+		system("pause");
 		return 0;
 	}
 
-	ret = logfilter.UpdateLogs();
+	while (1)
+	{
+		string input;
+		getline(cin, input);
 
+	}
+	
 	return 0;
 }
