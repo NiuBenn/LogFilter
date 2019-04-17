@@ -42,9 +42,27 @@ public:
 		return true;
 	}
 
-	static bool MakeKV(string input, vector<pair<string, string>>& kv)
+	static void MakeKV(string input, vector<pair<string, string>>& kv)
 	{
+		//logfilter --time 2019-04-15 14:23:34 1 --level I --pid 12345
+		size_t begin = 0, end = 0;
+		string pair_first, pair_second;
+		
+		while (1)
+		{
+			if (end == string::npos)
+				return;
+			begin = input.find("--", end + 1) + 2;
+			end = input.find(" ", begin + 1);
+			if (begin - 2 == string::npos)
+				return;
 
+			pair_first = input.substr(begin, end - begin);
+			begin = end + 1;
+			end = input.find(" ", begin + 1);
+			pair_second = input.substr(begin, end - begin);
+			kv.push_back(make_pair(pair_first, pair_second));
+		}
 	}
 };
 
@@ -67,14 +85,13 @@ public:
 	
 	int SearchByTimeL(int time_stamp, int dif);	//通过时间进行过滤检索
 	
-	int SearchByOtherL();	//通过其他条件进行过滤检索
-	
 	list<LogInfo>& LogList();	//一个接口函数，将私有成员 log_list_ 返回
 
-private:
-	map<string, map<string, list<list<LogInfo>::iterator>>> m_logs_;	
+	list<list<LogInfo>::iterator>& GetLogInfoListIter(string type, string param);
+
+	map<string, map<string, list<list<LogInfo>::iterator>>> mm_logs_;	
 	//分类统计LogInfo,存放的是log_list_的迭代器
-	
+private:
 	list<LogInfo> log_list_;	//存放所有的LogInfo
 };
 
@@ -89,14 +106,10 @@ public:
 	
 	int UpdateLogs();		//更新log_object_的LogInfo信息
 	
-	void SearchByTimeLF();	//通过时间进行过滤检索
-	
-	void SearchByOtherLF();	//通过其他条件进行过滤检索
-	
-	void SearchLF(string input);
+	int SearchLF(string input);		//检索模块
 
 private:
-	int count_;
+	int count_;		//已经读取的文件行数
 	Logs logs_object_;		//一个logs对象，统计LogInfo
 	string log_file_path_;	//要进行操作的日志文件路径
 };

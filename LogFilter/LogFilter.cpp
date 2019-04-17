@@ -61,12 +61,12 @@ bool Logs::AddLog(string& one_line)		//添加LogInfo信息，如果传入的string是合法Lo
 	it_loginfo--;	//获取到刚才push的LogInfo在log_list_中的迭代器
 
 	//将获取到的迭代器按类型push到m_logs中对应类型的list中
-	m_logs_["level"][loginfo_temp.level_].push_back(it_loginfo);
-	m_logs_["pid"][loginfo_temp.pid_].push_back(it_loginfo);
-	m_logs_["tid"][loginfo_temp.tid_].push_back(it_loginfo);
-	m_logs_["version"][loginfo_temp.version_].push_back(it_loginfo);
-	m_logs_["module"][loginfo_temp.module_].push_back(it_loginfo);
-	m_logs_["tag"][loginfo_temp.tag_].push_back(it_loginfo);
+	mm_logs_["level"][loginfo_temp.level_].push_back(it_loginfo);
+	mm_logs_["pid"][loginfo_temp.pid_].push_back(it_loginfo);
+	mm_logs_["tid"][loginfo_temp.tid_].push_back(it_loginfo);
+	mm_logs_["version"][loginfo_temp.version_].push_back(it_loginfo);
+	mm_logs_["module"][loginfo_temp.module_].push_back(it_loginfo);
+	mm_logs_["tag"][loginfo_temp.tag_].push_back(it_loginfo);
 
 	return true;
 };
@@ -85,15 +85,16 @@ int Logs::SearchByTimeL(int time_stamp, int dif)
 	return logs_count;
 }
 
-int Logs::SearchByOtherL()
-{
-	return 0;
-}
 
 list<LogInfo>& Logs::LogList()	
 {
 	return log_list_;
 };
+
+list<list<LogInfo>::iterator>& Logs::GetLogInfoListIter(string type, string param)
+{
+	return this->mm_logs_[type][param];
+}
 
 bool LogFilter::LogFilterInit()
 {
@@ -143,54 +144,147 @@ int LogFilter::UpdateLogs()	//更新LogInfo，更新成功返回更新成功的Log条数，失败返
 	return count_ - new_count;
 }
 
-void LogFilter::SearchByTimeLF()
-{
-	system("cls");
-	string time;
-	int dif, time_stamp;
-	cout << "请输入您要查询的log时间(格式如:2019-04-15 14:43:19)" << endl;
-	getchar();	//吃掉输入缓冲区中的回车
+//void LogFilter::SearchByTimeLF()
+//{
+//	system("cls");
+//	string time;
+//	int dif, time_stamp;
+//	cout << "请输入您要查询的log时间(格式如:2019-04-15 14:43:19)" << endl;
+//	getchar();	//吃掉输入缓冲区中的回车
+//
+//	getline(cin, time);		//接收用户输入的时间，因为中间有空格，所以cin无法一次接收
+//	time_stamp = Tools::StringToTimeStamp(time);	//转换为时间戳
+//
+//	cout << "请输入要查询的时间范围(秒为单位，例如 1 代表前后误差各1秒)" << endl;
+//	cin >> dif;
+//
+//	int ret = UpdateLogs();		//更新LogInfo数据
+//	if (-1 == ret)
+//	{
+//		cout << "更新log数据失败！！" << endl;
+//		system("pause");
+//		return;
+//	}
+//	cout << "已成功更新" << ret << "条log信息,即将按时间筛选" << endl;
+//	system("pause");
+//
+//	ret = logs_object_.SearchByTimeL(time_stamp, dif);	//进行筛选
+//	cout << "已成功筛选出" << ret << "条log" << endl;
+//	system("pause");
+//}
 
-	getline(cin, time);		//接收用户输入的时间，因为中间有空格，所以cin无法一次接收
-	time_stamp = Tools::StringToTimeStamp(time);	//转换为时间戳
-
-	cout << "请输入要查询的时间范围(秒为单位，例如 1 代表前后误差各1秒)" << endl;
-	cin >> dif;
-
-	int ret = UpdateLogs();		//更新LogInfo数据
-	if (-1 == ret)
-	{
-		cout << "更新log数据失败！！" << endl;
-		system("pause");
-		return;
-	}
-	cout << "已成功更新" << ret << "条log信息,即将按时间筛选" << endl;
-	system("pause");
-
-	ret = logs_object_.SearchByTimeL(time_stamp, dif);	//进行筛选
-	cout << "已成功筛选出" << ret << "条log" << endl;
-	system("pause");
-}
-
-void LogFilter::SearchLF(string input)
+int LogFilter::SearchLF(string input)
 {
 	bool param_time;
+	string time;
+	int time_stamp, dif, logs_count = 0;
+
 	vector<pair<string, string>> kv;
 	if (input.substr(0, strlen("logfilter")) != "logfilter")
 	{
-		cout << "非法命令！！" << endl;
-		return;
+		return -1;
 	}
 
-	if (input.find("--time") != string::npos)
+	//logfilter --time 2019-04-15 14:23:34 1 --level E --pid 12345
+	size_t index = input.find("--time");
+	if (index != string::npos)
 	{
-		param_time = false;
-		//input = input.substr();
+		time = input.substr(index + strlen("--time "), strlen("2019-04-15 14:23:34"));
+		time_stamp = Tools::StringToTimeStamp(time);
+		dif = input[index + strlen("--time 2019-04-15 14:23:34 ")] - '0';
+		param_time = true;
+		input = input.substr(0, index) + input.substr(index + strlen("--time 2019-04-15 14:23:34 1 "));
 	}
 	else
-		param_time = true;
+		param_time = false;
 
-	bool ret = Tools::MakeKV(input, kv);
+	Tools::MakeKV(input, kv);
+	if (kv.size() == 0 && false == param_time)
+		return -1;
+
+	if (kv.size() == 0)
+	{
+		logs_count = logs_object_.SearchByTimeL(time_stamp, dif);
+		return logs_count;
+	}
+
+	if (kv[0].first != "level" && kv[0].first != "pid" &&
+		kv[0].first != "tid" && kv[0].first != "version" &&
+		kv[0].first != "module" && kv[0].first != "tag")
+		return -1;
+
+	list<list<LogInfo>::iterator>& loginfo_iter_list = logs_object_.GetLogInfoListIter(kv[0].first, kv[0].second);
+
+	for (auto& iter : loginfo_iter_list)
+	{
+		bool typeok = true;
+		//[level] [pid:tid] [version] [module] [tag]
+		for (size_t i = 1; i < kv.size(); ++i)
+		{
+			if (kv[i].first == "level")
+			{
+				if (iter->level_ != kv[i].second)
+				{
+					typeok = false;
+					break;
+				}
+			}
+			else if (kv[i].first == "pid")
+			{
+				if (iter->pid_ != kv[i].second)
+				{
+					typeok = false;
+					break;
+				}
+			}
+			else if (kv[i].first == "tid")
+			{
+				if (iter->tid_ != kv[i].second)
+				{
+					typeok = false;
+					break;
+				}
+			}
+			else if (kv[i].first == "version")
+			{
+				if (iter->version_ != kv[i].second)
+				{
+					typeok = false;
+					break;
+				}
+			}
+			else if (kv[i].first == "module")
+			{
+				if (iter->module_ != kv[i].second)
+				{
+					typeok = false;
+					break;
+				}
+			}
+			else if (kv[i].first == "tag")
+			{
+				if (iter->tag_ != kv[i].second)
+				{
+					typeok = false;
+					break;
+				}
+			}
+			else
+				return -1;
+			
+		}
+
+		if (true == param_time)
+		{
+			if (iter->time_ < time_stamp - dif || iter->time_ > time_stamp + dif - 1)
+				break;
+		}
+		if (true == typeok)
+		{
+			logs_count++;
+			cout << iter->one_full_log_ << endl;
+		}
+	}
 	
-
+	return logs_count;
 }

@@ -1,5 +1,4 @@
 #include"LogFilter.h"
-#include"Menu.h"
 #include<iostream>
 
 int main()
@@ -19,9 +18,18 @@ int main()
 
 	while (1)
 	{
+		logfilter.UpdateLogs();
 		string input;
 		getline(cin, input);
-
+		cout << endl;
+		if (input.size() != 0)
+		{
+			int ret = logfilter.SearchLF(input + "  ");
+			if (ret == -1)
+				cout << "命令参数有误，请检查后再试！" << endl << endl;
+			else
+				cout << endl << "共计 " << ret << " 条结果!!" << endl << endl;
+		}
 	}
 	
 	return 0;
