@@ -1,61 +1,62 @@
 #include"LogFilter.h"
 #include<iostream>
-#include<list>;
+#include<list>
 #include<fstream>
+#include<string.h>
+#include<regex>
 
+const int kTimeLen = strlen("2019-04-15 14:43:19.705");
 
 bool Logs::AddLog(string& one_line)		//添加LogInfo信息，如果传入的string是合法Log返回true，否则返回false
 {
+
+    vector<string> param;
+    string str(one_line);
+    LogInfo loginfo_temp;   //靠縧oginfo靠
+    size_t begin_index = 0, end_index = 0;
+    bool ret = false;
+
+    std::string pattern{ "\\[[^\\[]*\\]" };
+    std::regex re(pattern);
+
+    std::smatch results;
+    while (std::regex_search(str, results, re))
+    {
+        for (auto s : results)
+            param.push_back(s);
+        str = results.suffix().str();
+    }
+
+    if (param.size() < 6)
+        return false;
+
+    auto str_iter = param.begin();
+    int time_stamp = Tools::StringToTimeStamp((*str_iter).substr(1, kTimeLen - 4));
+    loginfo_temp.time_ = time_stamp;
+
+    str_iter++;
+    loginfo_temp.level_ = (*str_iter)[1];
+
+    str_iter++;
+    size_t mid_index = (*str_iter).find(':');
+    if (mid_index == string::npos)
+        return false;
+
+    loginfo_temp.pid_ = (*str_iter).substr(1, mid_index - 1);
+    loginfo_temp.tid_ = (*str_iter).substr(mid_index + 1);
 	
-	LogInfo loginfo_temp;	//临时的loginfo对象
-	size_t begin_index = 0, end_index = 0;
-	bool ret = false;
+    str_iter++;
+    loginfo_temp.version_ = (*str_iter).substr(1, (*str_iter).size() - 2);  //靠version
+    
+    str_iter++;
+    loginfo_temp.module_ = (*str_iter).substr(1, (*str_iter).size() - 2);   //靠module
 
-	ret = Tools::GetIndex(one_line, begin_index, end_index);	//获取'[' ']'的下标，并且判断是否合法
-	if (false == ret)
-		return false;
+    str_iter++;
+    loginfo_temp.tag_ = (*str_iter).substr(1, (*str_iter).size() - 2);  //靠tag
 
-	//将string 类型时间转换为时间戳，这里时间保留到单位：秒，如下
-	//2019-04-15 14:43:19.705
-	//2019-04-15 14:43:19
-	int time_stamp = Tools::StringToTimeStamp(one_line.substr(1, kTimeLen - 4));
-	loginfo_temp.time_ = time_stamp;
+    loginfo_temp.one_full_log_ = one_line;
 
-	ret = Tools::GetIndex(one_line, begin_index, end_index);
-	if (false == ret)
-		return false;
-
-	loginfo_temp.level_ = one_line[begin_index + 1];	//获取level
-
-	ret = Tools::GetIndex(one_line, begin_index, end_index);
-	if (false == ret)
-		return false;
-
-	size_t mid_index = one_line.find(':', begin_index);		//获取pid、tid，pid与tid以 ':' 分隔
-	loginfo_temp.pid_ = one_line.substr(begin_index + 1, mid_index - begin_index - 1);
-	loginfo_temp.tid_ = one_line.substr(mid_index + 1, end_index - mid_index - 1);
-
-	ret = Tools::GetIndex(one_line, begin_index, end_index);
-	if (false == ret)
-		return false;
-
-	loginfo_temp.version_ = one_line.substr(begin_index + 1, end_index - begin_index - 1);	//获取version
-
-	ret = Tools::GetIndex(one_line, begin_index, end_index);
-	if (false == ret)
-		return false;
-
-	loginfo_temp.module_ = one_line.substr(begin_index + 1, end_index - begin_index - 1);	//获取module
-
-	ret = Tools::GetIndex(one_line, begin_index, end_index);
-	if (false == ret)
-		return false;
-
-	loginfo_temp.tag_ = one_line.substr(begin_index + 1, end_index - begin_index - 1);	//获取tag
-
-	loginfo_temp.one_full_log_ = one_line;
-
-	log_list_.push_back(loginfo_temp);		//将获取到的LogIngo 临时对象 push到 log_list_中
+    log_list_.push_back(loginfo_temp);		//将获取到的LogIngo 临时对象 push到 log_list_中
 	
 	list<LofInfo>::iterator it_loginfo = log_list_.end();
 	it_loginfo--;	//获取到刚才push的LogInfo在log_list_中的迭代器

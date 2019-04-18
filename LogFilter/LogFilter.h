@@ -6,8 +6,6 @@
 #include<time.h>
 using namespace std;
 
-const int kTimeLen = strlen("2019-04-15 14:43:19.705");		//string Time 长度
-
 class Tools		//工具类，里面定义部分工具函数
 {
 public:
