@@ -1,36 +1,89 @@
 #include"LogFilter.h"
 #include<iostream>
+#include<string.h>
 
-int main()
+int main(int argc, char* argv[])
 {
-	string log_file_path;
-	/*cout << "请输入要进行操作的log文件路径:";
-	cin >> log_file_path;*/
-	log_file_path = "../log.txt";
-	LogFilter logfilter(log_file_path);
-	bool ret = logfilter.LogFilterInit();
-	if (false == ret)
+	list<LogInfo> loginfo_list;
+	
+	bool ret = Tools::IsFilePathOK(argv[1]);
+	if (ret == false)
 	{
-		cout << "Init Error!! Log File Open Error !!" << endl;
-		system("pause");
-		return 0;
+		std::cout << "Open Log File Error!!" << std::endl;
+		return -1;
 	}
 
-	while (1)
-	{
-		logfilter.UpdateLogs();
-		string input;
-		getline(cin, input);
-		cout << endl;
-		if (input.size() != 0)
-		{
-			int ret = logfilter.SearchLF(input + "  ");
-			if (ret == -1)
-				cout << "命令参数有误，请检查后再试！" << endl << endl;
-			else
-				cout << endl << "共计 " << ret << " 条结果!!" << endl << endl;
-		}
-	}
+	Tools::ReadFileAndAdd(argv[1], loginfo_list);
 	
+
+	for (size_t i = 2; i < argc;)
+	{
+		if (strcmp(argv[i], "--time") == 0 && i + 3 < argc)
+		{
+			string time = argv[i + 1];
+			time += " ";
+			time += argv[i + 2];
+			int dif = atoi(string(argv[i + 3]).c_str());
+			TimeFilter timefilter(time, dif);
+			loginfo_list = timefilter.filtrate(loginfo_list);
+			i += 4;
+			continue;
+		}
+		if (strcmp(argv[i], "--level") == 0 && i + 1 < argc)
+		{
+			string level = argv[i + 1];
+			LevelFilter levelfilter(level);
+			loginfo_list = levelfilter.filtrate(loginfo_list);
+			i += 2;
+			continue;
+		}
+		if (strcmp(argv[i], "--pid") == 0 && i + 1 < argc)
+		{
+			string pid = argv[i + 1];
+			PidFilter pidfilter(pid);
+			loginfo_list = pidfilter.filtrate(loginfo_list);
+			i += 2;
+			continue;
+		}
+		if (strcmp(argv[i], "--tid") == 0 && i + 1 < argc)
+		{
+			string tid = argv[i + 1];
+			TidFilter tidfilter(tid);
+			loginfo_list = tidfilter.filtrate(loginfo_list);
+			i += 2;
+			continue;
+		}
+		if (strcmp(argv[i], "--version") == 0 && i + 1 < argc)
+		{
+			string version = argv[i + 1];
+			VersionFilter versionfilter(version);
+			loginfo_list = versionfilter.filtrate(loginfo_list);
+			i += 2;
+			continue;
+		}
+		if (strcmp(argv[i], "--module") == 0 && i + 1 < argc)
+		{
+			string module = argv[i + 1];
+			ModuleFilter modulefilter(module);
+			loginfo_list = modulefilter.filtrate(loginfo_list);
+			i += 2;
+			continue;
+		}
+		if (strcmp(argv[i], "--tag") == 0 && i + 1 < argc)
+		{
+			string tag = argv[i + 1];
+			TagFilter tagfilter(tag);
+			loginfo_list = tagfilter.filtrate(loginfo_list);
+			i += 2;
+			continue;
+		}
+		i++;
+	}
+
+    for(auto& loginfo : loginfo_list)
+    {
+        std::cout << loginfo.one_full_log_ << std::endl;
+    }
+
 	return 0;
 }
