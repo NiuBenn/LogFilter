@@ -1,70 +1,7 @@
 #include"LogFilter.h"
-<<<<<<< HEAD
-=======
-#include<iostream>
-#include<list>
->>>>>>> 00977cbd6a3f38765a0c085723ef3437b0de1d64
 #include<regex>
-#include<fstream>
 
-const int kTimeLen = strlen("2019-04-15 14:43:19.705");		//string Time 长度
-
-<<<<<<< HEAD
 int Tools::StringToTimeStamp(const string& time)
-=======
-
-bool Logs::AddLog(string& one_line)		//添加LogInfo信息，如果传入的string是合法Log返回true，否则返回false
-{
-	LogInfo loginfo_temp;	
-	std::string pattern = R"(\[([0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}).[0-9]*\]\[([A-Z])\]\[([0-9]*):([0-9]*)\] \[([^\[]*)\]\[([^\[]*)\]\[([^\[]*)\])";
-	std::regex regex_object(pattern);
-	std::smatch results;
-
-	bool found = std::regex_search(one_line, results, regex_object);
-	if (found == false)
-		return false;
-
-	loginfo_temp.time_ = Tools::StringToTimeStamp(results[1]);		//time
-	loginfo_temp.level_ = results[2];								//level
-	loginfo_temp.pid_ = results[3];									//pid
-	loginfo_temp.tid_ = results[4];									//tid
-	loginfo_temp.version_ = results[5];								//version
-	loginfo_temp.module_ = results[6];								//module
-	loginfo_temp.tag_ = results[7];									//tid
-	loginfo_temp.one_full_log_ = one_line;
-
-	log_list_.push_back(loginfo_temp);		//将获取到的LogIngo 临时对象 push到 log_list_中
-	
-	list<LofInfo>::iterator it_loginfo = log_list_.end();
-	it_loginfo--;	//获取到刚才push的LogInfo在log_list_中的迭代器
-
-	//将获取到的迭代器按类型push到m_logs中对应类型的list中
-	mm_logs_["level"][loginfo_temp.level_].push_back(it_loginfo);
-	mm_logs_["pid"][loginfo_temp.pid_].push_back(it_loginfo);
-	mm_logs_["tid"][loginfo_temp.tid_].push_back(it_loginfo);
-	mm_logs_["version"][loginfo_temp.version_].push_back(it_loginfo);
-	mm_logs_["module"][loginfo_temp.module_].push_back(it_loginfo);
-	mm_logs_["tag"][loginfo_temp.tag_].push_back(it_loginfo);
-
-	return true;
-};
-
-int Logs::SearchByTimeL(int time_stamp, int dif)
-{
-	int logs_count = 0;		//用来统计符合条件的log数量
-	for (auto& loginfo : log_list_)		//遍历log_list_
-	{
-		if (loginfo.time_ >= time_stamp - dif && loginfo.time_ <= time_stamp + dif - 1)
-		{
-			logs_count++;
-			cout << loginfo.one_full_log_ << endl;
-		}
-	}
-	return logs_count;
-}
-
-list<LogInfo>& Logs::LogList()	
->>>>>>> 00977cbd6a3f38765a0c085723ef3437b0de1d64
 {
 	struct tm time_stamp;
 	//2019-04-15 14:43:19
@@ -91,36 +28,43 @@ bool Tools::IsFilePathOK(const string& log_file_path)
 	return true;
 }
 
-int Tools::ReadFileAndAdd(const string& log_file_path, list<LogInfo>& loginfo_list)
+void Tools::ReadLogAndParse(std::istream& input, list<Filter*>& filter_list)
 {
-	std::ifstream log_file(log_file_path);	
+	LogInfo temp_loginfo;
 	string one_line;
-	int count = 0;
+	bool last_log = false;
 
-	if (!log_file.is_open())
+	while (std::getline(input, one_line))
 	{
-		return -1;
-	}
-
-	while (std::getline(log_file, one_line))	//循环读取，直到将文件读完
-	{
-		bool ret = AddLogForList(one_line, loginfo_list);	//添加LogInfo信息
-		if (false == ret)
+		bool ret = Tools::ParseLogLine(one_line, temp_loginfo);
+		
+        if (ret == false)
 		{
-			//如果one_line不是规范Log，为了避免有效数据丢失，将其追加到前一条有效LogInfo的one_full_log_中
-			if (loginfo_list.size() > 0)
-				loginfo_list.back().one_full_log_ += "\n" + one_line;
+			if (last_log == true)
+			{
+				std::cout << one_line << std::endl;
+			}
 		}
-		count++;
+		else
+		{
+			last_log = true;
+			for (auto& filter : filter_list)
+			{
+				if (filter->filtrate(temp_loginfo) == false)
+				{
+					last_log = false;
+					break;
+				}
+			}
+			if (last_log == true)
+				std::cout << one_line << std::endl;
+		}
 	}
 
-	return count;
 }
 
-<<<<<<< HEAD
-bool Tools::AddLogForList(const string& one_line, list<LogInfo>& loginfo_list)
+bool Tools::ParseLogLine(const string& one_line, LogInfo& loginfo)
 {
-	LogInfo loginfo_temp;
 	std::string pattern = R"(\[([0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}).[0-9]*\]\[([A-Z])\]\[([0-9]*):([0-9]*)\] \[([^\[]*)\]\[([^\[]*)\]\[([^\[]*)\])";
 	std::regex regex_object(pattern);
 	std::smatch results;
@@ -129,171 +73,123 @@ bool Tools::AddLogForList(const string& one_line, list<LogInfo>& loginfo_list)
 	if (found == false)
 		return false;
 
-	loginfo_temp.time_ = Tools::StringToTimeStamp(results[1]);		//time
-	loginfo_temp.level_ = results[2];								//level
-	loginfo_temp.pid_ = results[3];									//pid
-	loginfo_temp.tid_ = results[4];									//tid
-	loginfo_temp.version_ = results[5];								//version
-	loginfo_temp.module_ = results[6];								//module
-	loginfo_temp.tag_ = results[7];									//tid
-	loginfo_temp.one_full_log_ = one_line;
-=======
->>>>>>> 00977cbd6a3f38765a0c085723ef3437b0de1d64
-
-	loginfo_list.push_back(loginfo_temp);		//将获取到的LogIngo 临时对象 push到 log_list_中
+	loginfo.time_ = Tools::StringToTimeStamp(results[1]);		//time
+	loginfo.level_ = results[2];								//level
+	loginfo.pid_ = results[3];									//pid
+	loginfo.tid_ = results[4];									//tid
+	loginfo.version_ = results[5];								//version
+	loginfo.module_ = results[6];								//module
+	loginfo.tag_ = results[7];									//tid
+	loginfo.one_full_log_ = one_line;
 
 	return true;
 }
 
-list<LofInfo> TimeFilter::filtrate(list<LogInfo>& loginfo_list)
+list<Filter*> Tools::CreatFilterList(const int argc,const char* argv[])
 {
-<<<<<<< HEAD
-	int time_stamp = Tools::StringToTimeStamp(time_);	//time(str) --> time_stamp(int)
-	list<LogInfo>::iterator iter = loginfo_list.begin();
+	list<Filter*> filter_list;
 
-	while (iter != loginfo_list.end())
-=======
-	bool param_time;
-	string time;
-	int time_stamp, dif, logs_count = 0;
-	vector<pair<string, string>> kv;
-
-	if (input.substr(0, strlen("logfilter")) != "logfilter")
->>>>>>> 00977cbd6a3f38765a0c085723ef3437b0de1d64
+	for (size_t i = 0; i < argc;)
 	{
-		if ((*iter).time_ > time_stamp + dif_ - 1 || (*iter).time_ < time_stamp - dif_)
+		if (strcmp(argv[i], "--time") == 0 && i + 3 < argc)
 		{
-			list<LogInfo>::iterator iter_temp = iter;
-			iter++;
-			loginfo_list.erase(iter_temp);
+			string time = argv[i + 1];
+			time += " ";
+			time += argv[i + 2];
+			int dif = atoi(string(argv[i + 3]).c_str());
+			TimeFilter * timefilter = new TimeFilter(time, dif);
+			filter_list.push_back(timefilter);
+			i += 4;
+			continue;
 		}
-		else
-			iter++;
+		if (strcmp(argv[i], "--level") == 0 && i + 1 < argc)
+		{
+			string level = argv[i + 1];
+			LevelFilter* levelfilter = new LevelFilter(level);
+			filter_list.push_back(levelfilter);
+			i += 2;
+			continue;
+		}
+		if (strcmp(argv[i], "--pid") == 0 && i + 1 < argc)
+		{
+			string pid = argv[i + 1];
+			PidFilter* pidfilter = new PidFilter(pid);
+			filter_list.push_back(pidfilter);
+			i += 2;
+			continue;
+		}
+		if (strcmp(argv[i], "--tid") == 0 && i + 1 < argc)
+		{
+			string tid = argv[i + 1];
+			TidFilter* tidfilter = new TidFilter(tid);
+			filter_list.push_back(tidfilter);
+			i += 2;
+			continue;
+		}
+		if (strcmp(argv[i], "--version") == 0 && i + 1 < argc)
+		{
+			string version = argv[i + 1];
+			VersionFilter* versionfilter = new VersionFilter(version);
+			filter_list.push_back(versionfilter);
+			i += 2;
+			continue;
+		}
+		if (strcmp(argv[i], "--module") == 0 && i + 1 < argc)
+		{
+			string module = argv[i + 1];
+			ModuleFilter* modulefilter = new ModuleFilter(module);
+			filter_list.push_back(modulefilter);
+			i += 2;
+			continue;
+		}
+		if (strcmp(argv[i], "--tag") == 0 && i + 1 < argc)
+		{
+			string tag = argv[i + 1];
+			TagFilter* tagfilter = new TagFilter(tag);
+			filter_list.push_back(tagfilter);
+			i += 2;
+			continue;
+		}
+		i++;
 	}
 
-	return loginfo_list;
+	return filter_list;
 }
 
-list<LofInfo> LevelFilter::filtrate(list<LogInfo>& loginfo_list)
+
+bool TimeFilter::filtrate(const LogInfo& loginfo)
 {
-	list<LogInfo>::iterator iter = loginfo_list.begin();
-	while (iter != loginfo_list.end())
-	{
-<<<<<<< HEAD
-		if ((*iter).level_ != level_)
-		{
-			list<LogInfo>::iterator iter_temp = iter;
-			iter++;
-			loginfo_list.erase(iter_temp);
-		}
-		else
-			iter++;
-=======
-		time = input.substr(index + strlen("--time "), strlen("2019-04-15 14:23:34"));
-		time_stamp = Tools::StringToTimeStamp(time);
-
-		dif = input[index + strlen("--time 2019-04-15 14:23:34 ")] - '0';
-		param_time = true;
-		input = input.substr(0, index) + input.substr(index + strlen("--time 2019-04-15 14:23:34 1 "));
->>>>>>> 00977cbd6a3f38765a0c085723ef3437b0de1d64
-	}
-
-	return loginfo_list;
+	if (loginfo.time_ > time_stamp_ + dif_ - 1 || loginfo.time_ < time_stamp_ - dif_)
+		return false;
+	return true;
 }
 
-list<LofInfo> PidFilter::filtrate(list<LogInfo>& loginfo_list)
+bool LevelFilter::filtrate(const LogInfo& loginfo)
 {
-	list<LogInfo>::iterator iter = loginfo_list.begin();
-	while (iter != loginfo_list.end())
-	{
-		if ((*iter).pid_ != pid_)
-		{
-			list<LogInfo>::iterator iter_temp = iter;
-			iter++;
-			loginfo_list.erase(iter_temp);
-		}
-		else
-			iter++;
-	}
-
-	return loginfo_list;
+	return level_ == loginfo.level_;
 }
 
-list<LofInfo> TidFilter::filtrate(list<LogInfo>& loginfo_list)
+bool PidFilter::filtrate(const LogInfo& loginfo)
 {
-	list<LogInfo>::iterator iter = loginfo_list.begin();
-	while (iter != loginfo_list.end())
-	{
-		if ((*iter).tid_ != tid_)
-		{
-			list<LogInfo>::iterator iter_temp = iter;
-			iter++;
-			loginfo_list.erase(iter_temp);
-		}
-		else
-			iter++;
-	}
-
-	return loginfo_list;
+	return pid_ == loginfo.pid_;
 }
 
-list<LofInfo> VersionFilter::filtrate(list<LogInfo>& loginfo_list)
+bool TidFilter::filtrate(const LogInfo& loginfo)
 {
-	list<LogInfo>::iterator iter = loginfo_list.begin();
-	while (iter != loginfo_list.end())
-	{
-		if ((*iter).version_ != version_)
-		{
-			list<LogInfo>::iterator iter_temp = iter;
-			iter++;
-			loginfo_list.erase(iter_temp);
-		}
-		else
-			iter++;
-	}
-
-	return loginfo_list;
+	return tid_ == loginfo.tid_;
 }
 
-list<LofInfo> ModuleFilter::filtrate(list<LogInfo>& loginfo_list)
+bool VersionFilter::filtrate(const LogInfo& loginfo)
 {
-	list<LogInfo>::iterator iter = loginfo_list.begin();
-	while (iter != loginfo_list.end())
-	{
-		if ((*iter).module_ != module_)
-		{
-			list<LogInfo>::iterator iter_temp = iter;
-			iter++;
-			loginfo_list.erase(iter_temp);
-		}
-		else
-			iter++;
-	}
-
-	return loginfo_list;
+	return version_ == loginfo.version_;
 }
 
-list<LofInfo> TagFilter::filtrate(list<LogInfo>& loginfo_list)
+bool ModuleFilter::filtrate(const LogInfo& loginfo)
 {
-	list<LogInfo>::iterator iter = loginfo_list.begin();
-	while (iter != loginfo_list.end())
-	{
-		if ((*iter).tag_ != tag_)
-		{
-			list<LogInfo>::iterator iter_temp = iter;
-			iter++;
-			loginfo_list.erase(iter_temp);
-		}
-		else
-			iter++;
-	}
-<<<<<<< HEAD
-
-	return loginfo_list;
+	return module_ == loginfo.module_;
 }
 
-=======
-	
-	return logs_count;
+bool TagFilter::filtrate(const LogInfo& loginfo)
+{
+	return tag_ == loginfo.tag_;
 }
->>>>>>> 00977cbd6a3f38765a0c085723ef3437b0de1d64

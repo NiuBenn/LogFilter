@@ -1,5 +1,6 @@
 #pragma once
 #include<fstream>
+#include<iostream>
 #include<list>
 #include<string>
 #include<time.h>
@@ -17,7 +18,19 @@ typedef struct LogInfo	//struct log info
 	string module_;
 	string tag_;
 	string one_full_log_;	//one full log  include time level pid ...
-}LofInfo;
+}LogInfo;
+
+class Filter	//Filter基类
+{
+public:
+	virtual bool filtrate(const LogInfo& loginfo)
+	{
+		return false;
+	}
+
+	virtual ~Filter()
+	{};
+};
 
 class Tools
 {
@@ -26,32 +39,28 @@ public:
 	
 	static bool IsFilePathOK(const string& log_file_path);	//OK --> true  
 
-	static int ReadFileAndAdd(const string& log_file_path, list<LogInfo>& loginfo_list); 
+	static void ReadLogAndParse(std::istream& input, list<Filter*>& filter_list);
 
-	static bool AddLogForList(const string& one_line, list<LogInfo>& loginfo_list);	
+	static bool ParseLogLine(const string& one_line, LogInfo& loginfo);	
+
+	static list<Filter*> CreatFilterList(const int argc, const char* argv[]);
 };
 
-class Filter	//Filter基类
-{
-public:
-	virtual list<LogInfo> filtrate(list<LogInfo>& loginfo_list)
-	{
-		list<LogInfo> result;
-		return result;
-	}
-};
 
 class TimeFilter : public Filter
 {
 private:
-	string time_;	
+	int time_stamp_;	
 	int dif_;
+
 public:
 	TimeFilter(string time, int dif)
-		:time_(time), dif_(dif)
-	{};
+		:dif_(dif)
+	{
+		time_stamp_ = Tools::StringToTimeStamp(time);
+	};
 
-	list<LofInfo> filtrate(list<LogInfo>& loginfo_list);
+	bool filtrate(const LogInfo& loginfo);
 };
 
 class LevelFilter : public Filter
@@ -64,7 +73,7 @@ public:
 		:level_(level)
 	{};
 
-	list<LofInfo> filtrate(list<LogInfo>& loginfo_list);
+	bool filtrate(const LogInfo& loginfo);
 };
 
 class PidFilter : public Filter
@@ -77,7 +86,7 @@ public:
 		:pid_(pid)
 	{};
 
-	list<LofInfo> filtrate(list<LogInfo>& loginfo_list);
+	bool filtrate(const LogInfo& loginfo);
 };
 
 class TidFilter : public Filter
@@ -90,7 +99,7 @@ public:
 		:tid_(tid)
 	{};
 
-	list<LofInfo> filtrate(list<LogInfo>& loginfo_list);
+	bool filtrate(const LogInfo& loginfo);
 };
 
 class VersionFilter : public Filter
@@ -103,7 +112,7 @@ public:
 		:version_(version)
 	{};
 
-	list<LofInfo> filtrate(list<LogInfo>& loginfo_list);
+	bool filtrate(const LogInfo& loginfo);
 };
 
 class ModuleFilter : public Filter
@@ -116,7 +125,7 @@ public:
 		:module_(module)
 	{};
 
-	list<LofInfo> filtrate(list<LogInfo>& loginfo_list);
+	bool filtrate(const LogInfo& loginfo);
 };
 
 class TagFilter : public Filter
@@ -129,5 +138,5 @@ public:
 		:tag_(tag)
 	{};
 
-	list<LofInfo> filtrate(list<LogInfo>& loginfo_list);
+	bool filtrate(const LogInfo& loginfo);
 };
