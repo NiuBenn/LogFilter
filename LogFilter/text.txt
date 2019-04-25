@@ -1,3 +1,0 @@
-[2019-04-15 14:43:19.705][I][31592:031592] [U.0.0.0][lapp][CatchAllException] call: InitConfig
-[2019-04-15 14:43:19.705][I][31592:031592] [U.0.0.0][wsrpc][NetworkAdaptor] Construct NetworkAdaptor: 
-[2019-04-15 14:43:19.705][I][31592:031592] [U.0.0.0][wsrpc][AdaptiveServiceObserver][0x55775883d400] AdaptiveServiceObserver Construct
